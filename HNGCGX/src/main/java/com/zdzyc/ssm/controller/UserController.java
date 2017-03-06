@@ -30,4 +30,10 @@ public class UserController {
         model.addAttribute("user", user);
         return "showUser";
     }
+
+    @RequestMapping("/login")
+    public String showUser() {
+
+        return "login";
+    }
 }  
