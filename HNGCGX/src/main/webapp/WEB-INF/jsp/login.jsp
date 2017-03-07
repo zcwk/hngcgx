@@ -65,7 +65,7 @@
                                 <label>
                                     <input name="remember" type="checkbox" value="Remember Me">Remember Me
                                 </label>
-                                <a href="/user/register" style="float: right">新用户注册</a>
+                                <a href="user/register" style="float: right">新用户注册</a>
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
                             <a href="index.html" class="btn btn-lg btn-success btn-block">登录</a>

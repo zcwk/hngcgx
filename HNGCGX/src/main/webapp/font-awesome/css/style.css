@@ -102,7 +102,7 @@ ul.navbar-nav {
 
 .navbar-brand {
 	width: 123px;
-	background: url(../img/logo.png) left center no-repeat;
+	background: url(register/img/logo.png) left center no-repeat;
 	text-indent: -99999px;
 }
 
@@ -231,7 +231,7 @@ only screen and (                min-resolution: 2dppx) {
 	
 	/* logo */
     .navbar-brand {
-    	background-image: url(../img/logo.png) !important; background-repeat: no-repeat !important; background-size: 123px 49px !important;
+    	background-image: url(register/img/logo.png) !important; background-repeat: no-repeat !important; background-size: 123px 49px !important;
     }
 	
 }
