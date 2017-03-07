@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.zdzyc.ssm.dao.ProjectMapper">
+    <resultMap id="BaseResultMap" type="com.zdzyc.ssm.model.Project" >
+        <result column="id" property="id" jdbcType="BIGINT" />
+        <result column="user_id" property="userId" jdbcType="BIGINT" />
+        <result column="project_name" property="projectName" jdbcType="VARCHAR" />
+        <result column="project_title" property="projectTitle" jdbcType="VARCHAR" />
+        <result column="project_detail" property="projectDetail" jdbcType="VARCHAR" />
+        <result column="project_type" property="projectType" jdbcType="BIGINT" />
+        <result column="images" property="images" jdbcType="VARCHAR" />
+        <result column="download_num" property="downLoadNum" jdbcType="BIGINT" />
+        <result column="star" property="star" jdbcType="BIGINT" />
+        <result column="message_num" property="messageNum" jdbcType="BIGINT" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, user_id, project_name, project_title, project_detail, project_type, images, download_num,
+        star,message_num,modify_time
+    </sql>
+    <select id="selectProjectByIndex" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from tb_project
+        where limit #{beginIndex,jdbcType=BIGINT}, #{endIndex,jdbcType=BIGINT}
+    </select>
+</mapper>
