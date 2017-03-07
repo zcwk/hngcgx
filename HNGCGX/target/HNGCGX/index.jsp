@@ -6,6 +6,8 @@
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
 %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -347,6 +349,18 @@
                         <i class="fa fa-clock-o fa-fw"></i> 共享资料下载区
                     </div>
                     <div class="container-fluid">
+
+                        <c:forEach var="m" items="${Page.list}">
+                            <div style="border: 1px solid black">
+                                <a href="user_scan.action?id=${m.sourceUser.id}">@${m.sourceUser.name}</a>：${m.forwardRemark }
+                                <c:forEach items="${m.forwardRemarks}" var="r">
+                                    <a href="user_scan.action?id=${r.userId}">@${r.userName }</a>${r.remark }
+                                </c:forEach>
+                                time:${m.getNTime()}<br /> <a href="#"
+                                                              onclick="prom(${m.sourceMicroblogId==0?m.id:m.sourceMicroblogId }, ${m.id})">
+                                (转发${m.getForwards() }) </a> <br />
+                            </div>
+                        </c:forEach>
 
                         <div class="row" style="margin-top: 15px">
                             <div class="col-xs-6 col-md-4" style="margin-left: 10px; width: 32.5%">

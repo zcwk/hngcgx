@@ -6,6 +6,8 @@
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
 %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -347,6 +349,29 @@
                         <i class="fa fa-clock-o fa-fw"></i> 共享资料下载区
                     </div>
                     <div class="container-fluid">
+
+                        <c:forEach var="m" items="${Project.list}">
+                            <div class="row" style="margin-top: 15px">
+                                <c:forEach items="${m.forwardRemarks}" var="r">
+                                    <div class="col-xs-6 col-md-4" style="margin-left: 10px; width: 32.5%">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Default Panel
+                                            </div>
+                                            <div class="panel-body">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt
+                                                    est
+                                                    vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et,
+                                                    fringilla augue.</p>
+                                            </div>
+                                            <div class="panel-footer">
+                                                Panel Footer
+                                            </div>
+                                        </div>
+                                    </div>
+                                </c:forEach>
+                            </div>
+                        </c:forEach>
 
                         <div class="row" style="margin-top: 15px">
                             <div class="col-xs-6 col-md-4" style="margin-left: 10px; width: 32.5%">
