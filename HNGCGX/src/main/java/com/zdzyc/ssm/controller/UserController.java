@@ -32,8 +32,14 @@ public class UserController {
     }
 
     @RequestMapping("/login")
-    public String showUser() {
+    public String login() {
 
         return "login";
+    }
+
+    @RequestMapping("/register")
+    public String register() {
+
+        return "register";
     }
 }  
