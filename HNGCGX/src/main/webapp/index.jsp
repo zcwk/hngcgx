@@ -194,16 +194,16 @@
         <!-- /.navbar-static-side -->
     </nav>
 
-    <div id="page-wrapper">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Dashboard</h1>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
+    <div id="page-wrapper" >
+        <%--<div class="row">--%>
+            <%--<div class="col-lg-12">--%>
+                <%--<h1 class="page-header">Dashboard</h1>--%>
+            <%--</div>--%>
+            <%--<!-- /.col-lg-12 -->--%>
+        <%--</div>--%>
         <!-- /.row -->
         <div class="row">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" style="margin-top: 20px">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <div class="row">
@@ -212,7 +212,7 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">26</div>
-                                <div>New Comments!</div>
+                                <div>住宅建筑</div>
                             </div>
                         </div>
                     </div>
@@ -225,7 +225,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" style="margin-top: 20px">
                 <div class="panel panel-green">
                     <div class="panel-heading">
                         <div class="row">
@@ -234,7 +234,7 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">12</div>
-                                <div>New Tasks!</div>
+                                <div>商业建筑</div>
                             </div>
                         </div>
                     </div>
@@ -247,7 +247,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" style="margin-top: 20px">
                 <div class="panel panel-yellow">
                     <div class="panel-heading">
                         <div class="row">
@@ -256,7 +256,7 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">124</div>
-                                <div>New Orders!</div>
+                                <div>桥梁道路</div>
                             </div>
                         </div>
                     </div>
@@ -269,7 +269,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" style="margin-top: 20px">
                 <div class="panel panel-red">
                     <div class="panel-heading">
                         <div class="row">
@@ -278,7 +278,7 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">13</div>
-                                <div>Support Tickets!</div>
+                                <div>园艺盆栽</div>
                             </div>
                         </div>
                     </div>
@@ -344,7 +344,7 @@
                 <!-- /.panel 资料展示-->
                 <div class="panel panel-default" style="margin-top: 20px">
                     <div class="panel-heading">
-                        <i class="fa fa-clock-o fa-fw"></i> 共享资料
+                        <i class="fa fa-clock-o fa-fw"></i> 共享资料下载区
                     </div>
                     <div class="container-fluid">
 
