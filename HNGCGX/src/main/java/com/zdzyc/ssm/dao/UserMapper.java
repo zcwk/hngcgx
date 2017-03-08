@@ -13,4 +13,6 @@ public interface UserMapper {
 
     User selectByPrimaryKey(Long id);
 
+    void addUser(User user);
+
 }

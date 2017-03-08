@@ -18,10 +18,10 @@ import java.util.List;
 @Service("projectService")
 public class ProjectServiceImpl implements IProjectService {
     @Resource
-    public ProjectMapper projectService;
+    public ProjectMapper projectMapper;
 
     @Override
     public List<Project> selectProjectByIndex(Long beginIndex, Long endIndex) {
-        return projectService.selectProjectByIndex(beginIndex, endIndex);
+        return projectMapper.selectProjectByIndex(beginIndex, endIndex);
     }
 }

@@ -55,10 +55,10 @@
                     <form role="form">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                <input class="form-control" placeholder="用户名" name="email" type="text" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Password" name="password" type="password"
+                                <input class="form-control" placeholder="密码" name="password" type="password"
                                        value="">
                             </div>
                             <div class="checkbox">
@@ -68,7 +68,7 @@
                                 <a href="user/register" style="float: right">新用户注册</a>
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
-                            <a href="index.html" class="btn btn-lg btn-success btn-block">登录</a>
+                            <a href="user/doLogin" class="btn btn-lg btn-success btn-block">登录</a>
                         </fieldset>
                     </form>
                 </div>

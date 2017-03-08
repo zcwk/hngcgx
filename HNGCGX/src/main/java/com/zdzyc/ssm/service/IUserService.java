@@ -13,4 +13,6 @@ public interface IUserService {
 
     User selectByPrimaryKey(Long id);
 
+    void addUser(User user);
+
 }

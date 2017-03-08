@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -31,10 +32,26 @@ public class UserController {
         return "showUser";
     }
 
-    @RequestMapping("/login")
-    public String login() {
+    @RequestMapping("/goLogin")
+    public String goLogin() {
 
         return "login";
+    }
+
+    @RequestMapping("/doLogin")
+    public String doLogin(Model model, String userName, String passWord) {
+
+        if (StringUtils.isEmpty(userName)) {
+            model.addAttribute("error","用户名不能为空");
+            return "redirect:goLogin";
+        }
+
+        if (StringUtils.isEmpty(passWord)) {
+            model.addAttribute("error","用户名不能为空");
+            return "redirect:goLogin";
+        }
+
+        return "index";
     }
 
     @RequestMapping("/register")
@@ -42,4 +59,13 @@ public class UserController {
 
         return "register";
     }
+
+    @RequestMapping("/addUser")
+    public String addUser(Model model, User user) {
+
+        userService.addUser(user);
+        return "redirect:/index.jsp";
+    }
+
+
 }  

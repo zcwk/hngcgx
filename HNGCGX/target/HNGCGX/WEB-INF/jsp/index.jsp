@@ -78,7 +78,17 @@
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="user/login"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    <li>
+                        <a href="user/goLogin"><i class="fa fa-sign-out fa-fw"></i>
+                            <c:choose>
+                                <c:when test="${user==null}">
+                                    登录
+                                </c:when>
+                                <c:otherwise>
+                                    注销
+                                </c:otherwise>
+                            </c:choose>
+                        </a>
                     </li>
                 </ul>
                 <!-- /.dropdown-user -->
@@ -340,13 +350,6 @@
                        data-slide="prev" style="height: 400px; margin-left: 15px">&lsaquo;</a>
                     <a class="carousel-control right" href="#myCarousel1"
                        data-slide="next" style="height: 400px;margin-right: 15px">&rsaquo;</a>
-                    <script>
-                        $(function () {
-                            $('#myCarousel1').carousel({
-                                interval: 2000
-                            });
-                        })
-                    </script>
                 </div>
 
 
@@ -406,7 +409,8 @@
                                                     <img src="img/index/che1.jpg"
                                                          style=" width: 100%; height: 100%">
                                                 </div>
-                                                <p style="margin-top:5px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap">标题。。。标题。。标题。。标题。。标题。。标题。。标题。。标题。。标题。。</p>
+                                                <p style="margin-top:5px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap">
+                                                    标题。。。标题。。标题。。标题。。标题。。标题。。标题。。标题。。标题。。</p>
                                             </div>
                                             <div class="panel-footer"
                                                  style="padding: 5px; display: flex;align-items: center">
@@ -512,26 +516,27 @@
                 <!-- /.row -->
             </div>
             <!-- /#page-wrapper -->
-
         </div>
-        <!-- /#wrapper -->
+    </div>
+</div>
+<!-- /#wrapper -->
 
-        <!-- jQuery -->
-        <script src="vendor/jquery/jquery.min.js"></script>
+<!-- jQuery -->
+<script src="vendor/jquery/jquery.min.js"></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-        <!-- Metis Menu Plugin JavaScript -->
-        <script src="vendor/metisMenu/metisMenu.min.js"></script>
+<!-- Metis Menu Plugin JavaScript -->
+<script src="vendor/metisMenu/metisMenu.min.js"></script>
 
-        <!-- Morris Charts JavaScript -->
-        <script src="vendor/raphael/raphael.min.js"></script>
-        <script src="vendor/morrisjs/morris.min.js"></script>
-        <script src="data/morris-data.js"></script>
+<!-- Morris Charts JavaScript -->
+<script src="vendor/raphael/raphael.min.js"></script>
+<script src="vendor/morrisjs/morris.min.js"></script>
+<script src="data/morris-data.js"></script>
 
-        <!-- Custom Theme JavaScript -->
-        <script src="dist/js/sb-admin-2.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="dist/js/sb-admin-2.js"></script>
 
 </body>
 

@@ -19,7 +19,7 @@ public class User implements Serializable {
 
     private String userPwd;
 
-    private String pwdSalt;
+    private String userDetail;
 
     private Date createTime;
 
@@ -68,11 +68,11 @@ public class User implements Serializable {
     }
 
     public String getPwdSalt() {
-        return pwdSalt;
+        return userDetail;
     }
 
-    public void setPwdSalt(String pwdSalt) {
-        this.pwdSalt = pwdSalt == null ? null : pwdSalt.trim();
+    public void setPwdSalt(String userDetail) {
+        this.userDetail = userDetail == null ? null : userDetail.trim();
     }
 
     public Date getCreateTime() {
@@ -107,7 +107,7 @@ public class User implements Serializable {
                 ", userPhone='" + userPhone + '\'' +
                 ", userEmail='" + userEmail + '\'' +
                 ", userPwd='" + userPwd + '\'' +
-                ", pwdSalt='" + pwdSalt + '\'' +
+                ", pwdSalt='" + userDetail + '\'' +
                 ", createTime=" + createTime +
                 ", modifyTime=" + modifyTime +
                 ", isDelete=" + isDelete +

@@ -99,8 +99,8 @@
                                            class="form-password form-control" id="form-password">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-repeat-password">二次确认密码</label>
-                                    <input type="password" name="form-repeat-password" placeholder="二次确认密码..."
+                                    <label class="sr-only" for="form-repeat-password">确认密码</label>
+                                    <input type="password" name="form-repeat-password" placeholder="确认密码..."
                                            class="form-repeat-password form-control" id="form-repeat-password">
                                 </div>
                                 <button type="button" class="btn btn-next">下一步</button>
@@ -122,6 +122,11 @@
                                     <label class="sr-only" for="form-email">Email</label>
                                     <input type="email" name="form-email" placeholder="邮箱..."
                                            class="form-email form-control" id="form-email">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-email">Phone</label>
+                                    <input type="text" name="form-email" placeholder="电话..."
+                                           class="form-email form-control" id="form-phone">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-about-yourself">自我介绍</label>
