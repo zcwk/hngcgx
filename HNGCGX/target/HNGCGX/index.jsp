@@ -102,91 +102,104 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i>办公建筑<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">Flot Charts</a>
+                                <a href="grid.html">室内套装</a>
                             </li>
                             <li>
-                                <a href="morris.html">Morris.js Charts</a>
+                                <a href="grid.html">共用设施</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">交通工具</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">亭台轩榭</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">亭台轩榭</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i>商业酒店<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="grid.html">室内套装</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">共用设施</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">交通工具</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i>住宅建筑<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">Panels and Wells</a>
+                                <a href="grid.html">室内套装</a>
                             </li>
                             <li>
-                                <a href="buttons.html">Buttons</a>
+                                <a href="grid.html">共用设施</a>
                             </li>
                             <li>
-                                <a href="notifications.html">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="typography.html">Typography</a>
-                            </li>
-                            <li>
-                                <a href="icons.html"> Icons</a>
-                            </li>
-                            <li>
-                                <a href="grid.html">Grid</a>
+                                <a href="grid.html">交通工具</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span
-                                class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i>别墅建筑<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="grid.html">室内套装</a>
                             </li>
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="grid.html">共用设施</a>
                             </li>
                             <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
+                                <a href="grid.html">交通工具</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i>景观小品<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="blank.html">Blank Page</a>
+                                <a href="grid.html">室内套装</a>
                             </li>
                             <li>
-                                <a href="login.html">Login Page</a>
+                                <a href="grid.html">共用设施</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">交通工具</a>
                             </li>
                         </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i>医疗建筑<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="grid.html">室内套装</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">共用设施</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">交通工具</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i>其它<span class="fa arrow"></span></a>
                         <!-- /.nav-second-level -->
                     </li>
                 </ul>
@@ -197,12 +210,6 @@
     </nav>
 
     <div id="page-wrapper">
-        <%--<div class="row">--%>
-        <%--<div class="col-lg-12">--%>
-        <%--<h1 class="page-header">Dashboard</h1>--%>
-        <%--</div>--%>
-        <%--<!-- /.col-lg-12 -->--%>
-        <%--</div>--%>
         <!-- /.row -->
         <div class="row">
             <div class="col-lg-3 col-md-6" style="margin-top: 20px">
@@ -367,217 +374,164 @@
                                         <% } else if (j == 2) {%>
                                         <div class="panel panel-success">
                                             <% }%>
-                                    <div class="panel-heading">
-                                        Default Panel
-                                    </div>
-                                    <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt
-                                            est
-                                            vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et,
-                                            fringilla augue.</p>
-                                    </div>
-                                    <div class="panel-footer">
-                                        Panel Footer
-                                    </div>
-                                </div>
-                            </div>
-                            <%}%>
-                        </div>
-                        <%
-                            }
-                        } else {
-                            for (int i = 0; i < (10 / 3) + 1; i++) {
-                        %>
-                        <div class="row" style="margin-top: 15px">
-                            <%
-                                for (int j = 0; j < (10 - (i * 3) > 3 ? 3 : 10 - (i * 3)); j++) {
-                            %>
+                                            <div class="panel-heading">
+                                                <div>
 
-                            <div class="col-xs-6 col-md-4">
-                                <% if (j == 0) {%>
-                                <div class="panel panel-default">
-                                    <% } else if (j == 1) {%>
-                                    <div class="panel panel-primary">
-                                        <% } else if (j == 2) {%>
-                                        <div class="panel panel-success">
-                                            <% }%>
-                                    <div class="panel-heading">
-                                        Default Panel
+                                                </div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <p>标题</p>
+                                            </div>
+                                            <div class="panel-footer">
+                                                Panel Footer
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt
-                                            est
-                                            vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et,
-                                            fringilla augue.</p>
-                                    </div>
-                                    <div class="panel-footer">
-                                        Panel Footer
-                                    </div>
+                                    <%}%>
                                 </div>
-                            </div>
-                            <%}%>
-                        </div>
-                        <%
-                                }
-                            }
-                        %>
+                                <%
+                                    }
+                                } else {
+                                    for (int i = 0; i < (10 / 3) + 1; i++) {
+                                %>
+                                <div class="row" style="margin-top: 15px">
+                                    <%
+                                        for (int j = 0; j < (10 - (i * 3) > 3 ? 3 : 10 - (i * 3)); j++) {
+                                    %>
 
-                        <%--<div class="row" style="margin-top: 15px">--%>
-                        <%--<div class="col-xs-6 col-md-4" >--%>
-                        <%--<div class="panel panel-default">--%>
-                        <%--<div class="panel-heading">--%>
-                        <%--Default Panel--%>
-                        <%--</div>--%>
-                        <%--<div class="panel-body">--%>
-                        <%--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt--%>
-                        <%--est--%>
-                        <%--vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et,--%>
-                        <%--fringilla augue.</p>--%>
-                        <%--</div>--%>
-                        <%--<div class="panel-footer">--%>
-                        <%--Panel Footer--%>
-                        <%--</div>--%>
-                        <%--</div>--%>
-                        <%--</div>--%>
-                        <%--<!-- /.col-lg-4 -->--%>
-                        <%--<div class="col-xs-6 col-md-4" >--%>
-                        <%--<div class="panel panel-primary">--%>
-                        <%--<div class="panel-heading">--%>
-                        <%--Primary Panel--%>
-                        <%--</div>--%>
-                        <%--<div class="panel-body">--%>
-                        <%--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt--%>
-                        <%--est--%>
-                        <%--vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et,--%>
-                        <%--fringilla augue.</p>--%>
-                        <%--</div>--%>
-                        <%--<div class="panel-footer">--%>
-                        <%--Panel Footer--%>
-                        <%--</div>--%>
-                        <%--</div>--%>
-                        <%--</div>--%>
-                        <%--<!-- /.col-lg-4 -->--%>
-                        <%--<div class="col-xs-6 col-md-4" >--%>
-                        <%--<div class="panel panel-success">--%>
-                        <%--<div class="panel-heading">--%>
-                        <%--Success Panel--%>
-                        <%--</div>--%>
-                        <%--<div class="panel-body">--%>
-                        <%--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt--%>
-                        <%--est--%>
-                        <%--vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et,--%>
-                        <%--fringilla augue.</p>--%>
-                        <%--</div>--%>
-                        <%--<div class="panel-footer">--%>
-                        <%--Panel Footer--%>
-                        <%--</div>--%>
-                        <%--</div>--%>
-                        <%--</div>--%>
-                        <%--<!-- /.col-lg-4 -->--%>
-                        <%--</div>--%>
-                    </div>
-                    <nav aria-label="..." style="text-align: center">
-                        <ul class="pagination">
-                            <li class="disabled">
+                                    <div class="col-xs-6 col-md-4">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body" style="padding: 0px;">
+                                                <div style="width: 100% ; height: 180px">
+                                                    <img src="img/index/che1.jpg"
+                                                         style=" width: 100%; height: 100%">
+                                                </div>
+                                                <p style="margin-top:5px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap">标题。。。标题。。标题。。标题。。标题。。标题。。标题。。标题。。标题。。</p>
+                                            </div>
+                                            <div class="panel-footer"
+                                                 style="padding: 5px; display: flex;align-items: center">
+                                                <div>
+                                                    <img style=" width: 40px; height: 40px; "
+                                                         src="img/index/che1.jpg">
+                                                </div>
+                                                <div style="margin-left: 5px;width: 100%">
+                                                    <p style="margin:0; margin-right:40px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap">
+                                                        张三 </p>
+                                                    <p style="margin:0; margin-right:40px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap">
+                                                        2020年12月12日分享020年12月12日分享020年12月12日分享</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <%}%>
+                                </div>
+                                <%
+                                        }
+                                    }
+                                %>
+
+                            </div>
+                            <nav aria-label="..." style="text-align: center">
+                                <ul class="pagination">
+                                    <li class="disabled">
                               <span>
                                 <span aria-hidden="true">&laquo;</span>
                               </span>
-                            </li>
-                            <li class="active">
-                                <span>1 <span class="sr-only">(current)</span></span>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- /.panel -->
-            </div>
-            <!-- /.col-lg-8 -->
-            <div class="col-lg-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i class="fa fa-bell fa-fw"></i> Notifications Panel
-                    </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <div class="list-group">
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-comment fa-fw"></i> New Comment
-                                <span class="pull-right text-muted small"><em>4 minutes ago</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                <span class="pull-right text-muted small"><em>12 minutes ago</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                <span class="pull-right text-muted small"><em>27 minutes ago</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-tasks fa-fw"></i> New Task
-                                <span class="pull-right text-muted small"><em>43 minutes ago</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                <span class="pull-right text-muted small"><em>11:32 AM</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-bolt fa-fw"></i> Server Crashed!
-                                <span class="pull-right text-muted small"><em>11:13 AM</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-warning fa-fw"></i> Server Not Responding
-                                <span class="pull-right text-muted small"><em>10:57 AM</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-shopping-cart fa-fw"></i> New Order Placed
-                                <span class="pull-right text-muted small"><em>9:49 AM</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-money fa-fw"></i> Payment Received
-                                <span class="pull-right text-muted small"><em>Yesterday</em>
-                                    </span>
-                            </a>
+                                    </li>
+                                    <li class="active">
+                                        <span>1 <span class="sr-only">(current)</span></span>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                        <!-- /.list-group -->
-                        <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+                        <!-- /.panel -->
                     </div>
-                    <!-- /.panel-body -->
+                    <!-- /.col-lg-8 -->
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="fa fa-bell fa-fw"></i> 下载排行
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-comment fa-fw"></i> New Comment
+                                        <span class="pull-right text-muted small"><em>4 minutes ago</em>
+                                    </span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                        <span class="pull-right text-muted small"><em>12 minutes ago</em>
+                                    </span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                        <span class="pull-right text-muted small"><em>27 minutes ago</em>
+                                    </span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-tasks fa-fw"></i> New Task
+                                        <span class="pull-right text-muted small"><em>43 minutes ago</em>
+                                    </span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                        <span class="pull-right text-muted small"><em>11:32 AM</em>
+                                    </span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-bolt fa-fw"></i> Server Crashed!
+                                        <span class="pull-right text-muted small"><em>11:13 AM</em>
+                                    </span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-warning fa-fw"></i> Server Not Responding
+                                        <span class="pull-right text-muted small"><em>10:57 AM</em>
+                                    </span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-shopping-cart fa-fw"></i> New Order Placed
+                                        <span class="pull-right text-muted small"><em>9:49 AM</em>
+                                    </span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-money fa-fw"></i> Payment Received
+                                        <span class="pull-right text-muted small"><em>Yesterday</em>
+                                    </span>
+                                    </a>
+                                </div>
+                                <!-- /.list-group -->
+                                <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-4 -->
                 </div>
-                <!-- /.panel -->
+                <!-- /.row -->
             </div>
-            <!-- /.col-lg-4 -->
+            <!-- /#page-wrapper -->
+
         </div>
-        <!-- /.row -->
-    </div>
-    <!-- /#page-wrapper -->
+        <!-- /#wrapper -->
 
-</div>
-<!-- /#wrapper -->
+        <!-- jQuery -->
+        <script src="vendor/jquery/jquery.min.js"></script>
 
-<!-- jQuery -->
-<script src="vendor/jquery/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="vendor/metisMenu/metisMenu.min.js"></script>
 
-<!-- Metis Menu Plugin JavaScript -->
-<script src="vendor/metisMenu/metisMenu.min.js"></script>
+        <!-- Morris Charts JavaScript -->
+        <script src="vendor/raphael/raphael.min.js"></script>
+        <script src="vendor/morrisjs/morris.min.js"></script>
+        <script src="data/morris-data.js"></script>
 
-<!-- Morris Charts JavaScript -->
-<script src="vendor/raphael/raphael.min.js"></script>
-<script src="vendor/morrisjs/morris.min.js"></script>
-<script src="data/morris-data.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="dist/js/sb-admin-2.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="dist/js/sb-admin-2.js"></script>
 
 </body>
 
