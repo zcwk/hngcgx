@@ -15,6 +15,6 @@ public interface IUserService {
 
     User selectByName(String userName);
 
-    void addUser(User user);
+    Long addUser(User user);
 
 }

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=utf-8" %>
 <%
     String path = request.getContextPath();
@@ -36,26 +37,20 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="register/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="register/ico/apple-touch-icon-57-precomposed.png">
 
+    <script language="javascript">
+        function keywordfocus() {
+            document.getElementById('error-show').style.display = 'none';
+        }
+    </script>
 </head>
 
 <body>
 
-<!-- Top menu -->
-<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">Bootstrap Multi Step Registration Form Template</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-
+<c:forEach items="${errors}" var="error">
+    <div id="error-show" class="alert alert-danger" role="alert">
+            ${error}
     </div>
-</nav>
+</c:forEach>
 
 <!-- Top content -->
 <div class="top-content">
@@ -75,7 +70,7 @@
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3 form-box">
 
-                    <form role="form" action="" method="post" class="registration-form">
+                    <form role="form" action="user/addUser" class="registration-form">
 
                         <fieldset>
                             <div class="form-top">
@@ -90,20 +85,22 @@
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <label class="sr-only" for="form-first-name">用户名</label>
-                                    <input type="text" name="userName" placeholder="用户名..."
+                                    <input type="text" oninput="keywordfocus();" name="userName" placeholder="用户名..."
                                            class="form-first-name form-control" id="form-first-name">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-password">密码</label>
-                                    <input type="password" name="userPhone" placeholder="密码..."
+                                    <input type="password" oninput="keywordfocus();" name="userPwd" placeholder="密码..."
                                            class="form-password form-control" id="form-password">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-repeat-password">确认密码</label>
-                                    <input type="password" name="userPhone" placeholder="确认密码..."
+                                    <input type="password" oninput="keywordfocus();" name="userPwd2" placeholder="确认密码..."
                                            class="form-repeat-password form-control" id="form-repeat-password">
                                 </div>
                                 <button type="button" class="btn btn-next">下一步</button>
+
+                                <a href="user/goLogin" style="float: right; margin-top: 20px">有账号了直接登录</a>
                             </div>
                         </fieldset>
 
@@ -120,17 +117,17 @@
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <label class="sr-only" for="form-email">Email</label>
-                                    <input type="email" name="form-email" placeholder="邮箱..."
+                                    <input type="email" oninput="keywordfocus();" name="userEmail" placeholder="邮箱..."
                                            class="form-email form-control" id="form-email">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-email">Phone</label>
-                                    <input type="text" name="form-email" placeholder="电话..."
+                                    <input type="text" oninput="keywordfocus();" name="userPhone" placeholder="电话..."
                                            class="form-email form-control" id="form-phone">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-about-yourself">自我介绍</label>
-                                    <textarea name="form-about-yourself" placeholder="自我介绍..."
+                                    <textarea name="userDetail" oninput="keywordfocus();" placeholder="自我介绍..."
                                               class="form-about-yourself form-control"
                                               id="form-about-yourself"></textarea>
                                 </div>

@@ -25,6 +25,9 @@ public class UserVo implements Serializable {
     @NotEmpty(message = "{login.password.is.null}")
     private String userPwd;
 
+    @NotEmpty(message = "{login.password.is.null}")
+    private String userPwd2;
+
     private String userDetail;
 
     private Date createTime;
@@ -44,7 +47,7 @@ public class UserVo implements Serializable {
     }
 
     public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+        this.userName = userName;
     }
 
     public String getUserPhone() {
@@ -52,7 +55,7 @@ public class UserVo implements Serializable {
     }
 
     public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone == null ? null : userPhone.trim();
+        this.userPhone = userPhone;
     }
 
     public String getUserEmail() {
@@ -60,7 +63,7 @@ public class UserVo implements Serializable {
     }
 
     public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail == null ? null : userEmail.trim();
+        this.userEmail = userEmail;
     }
 
     public String getUserPwd() {
@@ -68,15 +71,23 @@ public class UserVo implements Serializable {
     }
 
     public void setUserPwd(String userPwd) {
-        this.userPwd = userPwd == null ? null : userPwd.trim();
+        this.userPwd = userPwd;
     }
 
-    public String getPwdSalt() {
+    public String getUserPwd2() {
+        return userPwd2;
+    }
+
+    public void setUserPwd2(String userPwd2) {
+        this.userPwd2 = userPwd2;
+    }
+
+    public String getUserDetail() {
         return userDetail;
     }
 
-    public void setPwdSalt(String userDetail) {
-        this.userDetail = userDetail == null ? null : userDetail.trim();
+    public void setUserDetail(String userDetail) {
+        this.userDetail = userDetail;
     }
 
     public Date getCreateTime() {
@@ -94,7 +105,6 @@ public class UserVo implements Serializable {
     public void setModifyTime(Date modifyTime) {
         this.modifyTime = modifyTime;
     }
-
 
     @Override
     public String toString() {

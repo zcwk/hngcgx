@@ -44,7 +44,7 @@ public class User implements Serializable {
     }
 
     public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+        this.userName = userName;
     }
 
     public String getUserPhone() {
@@ -52,7 +52,7 @@ public class User implements Serializable {
     }
 
     public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone == null ? null : userPhone.trim();
+        this.userPhone = userPhone;
     }
 
     public String getUserEmail() {
@@ -60,7 +60,7 @@ public class User implements Serializable {
     }
 
     public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail == null ? null : userEmail.trim();
+        this.userEmail = userEmail;
     }
 
     public String getUserPwd() {
@@ -68,15 +68,15 @@ public class User implements Serializable {
     }
 
     public void setUserPwd(String userPwd) {
-        this.userPwd = userPwd == null ? null : userPwd.trim();
+        this.userPwd = userPwd;
     }
 
-    public String getPwdSalt() {
+    public String getUserDetail() {
         return userDetail;
     }
 
-    public void setPwdSalt(String userDetail) {
-        this.userDetail = userDetail == null ? null : userDetail.trim();
+    public void setUserDetail(String userDetail) {
+        this.userDetail = userDetail;
     }
 
     public Date getCreateTime() {

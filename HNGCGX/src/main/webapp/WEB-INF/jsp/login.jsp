@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -45,9 +45,8 @@
     <![endif]-->
 
     <script language="javascript">
-        function keywordfocus()
-        {
-            document.getElementById('error-show').style.display='none';
+        function keywordfocus() {
+            document.getElementById('error-show').style.display = 'none';
         }
     </script>
 </head>
@@ -55,12 +54,11 @@
 <body>
 
 <div class="container">
+    <c:forEach items="${errors}" var="error">
         <div id="error-show" class="alert alert-danger" role="alert">
-            <c:forEach items="${errors}" var="error">
                 ${error}
-            </c:forEach>
         </div>
-
+    </c:forEach>
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
 
@@ -69,13 +67,15 @@
                     <h3 class="panel-title">登录</h3>
                 </div>
                 <div class="panel-body">
-                    <form role="form" action="user/doLogin" >
+                    <form role="form" action="user/doLogin">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" oninput="keywordfocus();" placeholder="用户名" name="userName" type="text" autofocus>
+                                <input class="form-control" oninput="keywordfocus();" placeholder="用户名" name="userName"
+                                       type="text" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" oninput="keywordfocus();" placeholder="密码" name="userPwd" type="password"
+                                <input class="form-control" oninput="keywordfocus();" placeholder="密码" name="userPwd"
+                                       type="password"
                                        value="">
                             </div>
                             <div class="checkbox">
@@ -85,7 +85,7 @@
                                 <a href="user/register" style="float: right">新用户注册</a>
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
-                            <input type="submit"  class="btn btn-lg btn-success btn-block" value="登录"></input>
+                            <input type="submit" class="btn btn-lg btn-success btn-block" value="登录"></input>
 
                         </fieldset>
                     </form>
