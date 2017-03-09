@@ -1,7 +1,6 @@
 package com.zdzyc.ssm.service;
 
 import com.zdzyc.ssm.model.Project;
-import com.zdzyc.ssm.model.User;
 
 import java.util.List;
 

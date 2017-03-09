@@ -1,32 +1,22 @@
 package com.zdzyc.ssm.controller;
 
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import com.zdzyc.ssm.model.User;
 import com.zdzyc.ssm.model.UserVo;
 import com.zdzyc.ssm.service.IUserService;
-import com.zdzyc.ssm.service.impl.UserServiceImpl;
 import com.zdzyc.ssm.utils.Utils;
-import org.apache.commons.io.FileUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
-import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 
 @Controller
