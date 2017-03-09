@@ -10,14 +10,16 @@ import java.util.Date;
  * Created by Administrator on 2016/9/22.
  */
 
-public class User implements Serializable {
+public class UserVo implements Serializable {
     private Long id;
 
     @NotEmpty(message = "{login.name.is.null}")
     private String userName;
 
+    @NotEmpty(message = "{login.password.is.null}")
     private String userPhone;
 
+    @NotEmpty(message = "{login.password.is.null}")
     private String userEmail;
 
     @NotEmpty(message = "{login.password.is.null}")
@@ -28,8 +30,6 @@ public class User implements Serializable {
     private Date createTime;
 
     private Date modifyTime;
-
-    private Byte isDelete;
 
     public Long getId() {
         return id;
@@ -95,13 +95,6 @@ public class User implements Serializable {
         this.modifyTime = modifyTime;
     }
 
-    public Byte getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Byte isDelete) {
-        this.isDelete = isDelete;
-    }
 
     @Override
     public String toString() {
@@ -114,7 +107,6 @@ public class User implements Serializable {
                 ", pwdSalt='" + userDetail + '\'' +
                 ", createTime=" + createTime +
                 ", modifyTime=" + modifyTime +
-                ", isDelete=" + isDelete +
                 '}';
     }
 }

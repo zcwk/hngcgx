@@ -1,6 +1,8 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
+         pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
 
 <%
     String path = request.getContextPath();
@@ -53,12 +55,12 @@
 <body>
 
 <div class="container">
+        <div id="error-show" class="alert alert-danger" role="alert">
+            <c:forEach items="${errors}" var="error">
+                ${error}
+            </c:forEach>
+        </div>
 
-    <div id="error-show" class="alert alert-danger" role="alert">
-        <c:forEach items="${errors}" var="error">
-            ${error}
-        </c:forEach>
-    </div>
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
 
@@ -67,13 +69,13 @@
                     <h3 class="panel-title">登录</h3>
                 </div>
                 <div class="panel-body">
-                    <form role="form">
+                    <form role="form" action="user/doLogin" >
                         <fieldset>
                             <div class="form-group">
                                 <input class="form-control" oninput="keywordfocus();" placeholder="用户名" name="userName" type="text" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" oninput="keywordfocus();" placeholder="密码" name="passWord" type="password"
+                                <input class="form-control" oninput="keywordfocus();" placeholder="密码" name="userPwd" type="password"
                                        value="">
                             </div>
                             <div class="checkbox">
@@ -83,7 +85,7 @@
                                 <a href="user/register" style="float: right">新用户注册</a>
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
-                            <a href="user/doLogin" class="btn btn-lg btn-success btn-block">登录</a>
+                            <input type="submit"  class="btn btn-lg btn-success btn-block" value="登录"></input>
 
                         </fieldset>
                     </form>

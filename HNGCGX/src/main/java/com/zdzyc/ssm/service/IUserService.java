@@ -13,6 +13,8 @@ public interface IUserService {
 
     User selectByPrimaryKey(Long id);
 
+    User selectByName(String userName);
+
     void addUser(User user);
 
 }

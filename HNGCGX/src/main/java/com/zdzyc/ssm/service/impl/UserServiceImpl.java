@@ -22,6 +22,11 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
+    public User selectByName(String userName) {
+        return userMapper.selectByName(userName);
+    }
+
+    @Override
     public void addUser(User user) {
         this.addUser(user);
     }

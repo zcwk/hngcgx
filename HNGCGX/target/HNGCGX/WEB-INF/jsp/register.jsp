@@ -90,17 +90,17 @@
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <label class="sr-only" for="form-first-name">用户名</label>
-                                    <input type="text" name="form-first-name" placeholder="用户名..."
+                                    <input type="text" name="userName" placeholder="用户名..."
                                            class="form-first-name form-control" id="form-first-name">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-password">密码</label>
-                                    <input type="password" name="form-password" placeholder="密码..."
+                                    <input type="password" name="userPhone" placeholder="密码..."
                                            class="form-password form-control" id="form-password">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-repeat-password">确认密码</label>
-                                    <input type="password" name="form-repeat-password" placeholder="确认密码..."
+                                    <input type="password" name="userPhone" placeholder="确认密码..."
                                            class="form-repeat-password form-control" id="form-repeat-password">
                                 </div>
                                 <button type="button" class="btn btn-next">下一步</button>

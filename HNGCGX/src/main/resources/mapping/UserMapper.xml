@@ -25,6 +25,14 @@
         where id = #{id,jdbcType=BIGINT}
     </select>
 
+
+    <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_user
+        where user_name = #{userName,jdbcType=VARCHAR}
+    </select>
+
     <insert id="addUser" parameterType="com.zdzyc.ssm.model.User">
         insert into tb_user(id,user_name,user_phone,user_email,user_pwd,user_detail,create_time)
         values(usernext.nextval,#{userName},#{userPhone},#{userEmail},#{userPwd},#{userDetail},#{createTime})

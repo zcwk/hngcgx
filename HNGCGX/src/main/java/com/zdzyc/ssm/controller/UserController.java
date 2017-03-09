@@ -2,6 +2,7 @@ package com.zdzyc.ssm.controller;
 
 
 import com.zdzyc.ssm.model.User;
+import com.zdzyc.ssm.model.UserVo;
 import com.zdzyc.ssm.service.IUserService;
 import com.zdzyc.ssm.service.impl.UserServiceImpl;
 import org.apache.commons.io.FileUtils;
@@ -45,21 +46,21 @@ public class UserController {
     }
 
     @RequestMapping("/doLogin")
-    public String doLogin(Model model, @Validated @ModelAttribute("user")User user,BindingResult result) {
+    public String doLogin(@Validated @ModelAttribute("user") User user, BindingResult result, Model model) {
         //如果存在校验错误
         if (result.hasErrors()) {
 
             //输出错误信息
-            List<ObjectError> allErrors=result.getAllErrors();//接受检验错误结果
+            List<ObjectError> allErrors = result.getAllErrors();//接受检验错误结果
 
-            List<String> listErrors=new ArrayList<>();//自定义一个list接受自己编码后的提示字符串，在把自己定义的list传到界面，
+            List<String> listErrors = new ArrayList<>();//自定义一个list接受自己编码后的提示字符串，在把自己定义的list传到界面，
             //这样就解决了把乱码传到界面的问题了
 
             for (ObjectError objectError : allErrors) {
                 //输出错误信息
-                String strError= null; //把返回错误的提示再次编码
+                String strError = null; //把返回错误的提示再次编码
                 try {
-                    strError = new String(objectError.getDefaultMessage().getBytes("ISO-8859-1"),"UTF-8");
+                    strError = new String(objectError.getDefaultMessage().getBytes("ISO-8859-1"), "UTF-8");
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
@@ -71,7 +72,15 @@ public class UserController {
             return "login";
         }
 
-        return "index";
+        User m_user = userService.selectByName(user.getUserName());
+
+        if (!StringUtils.isEmpty(m_user)) {
+            model.addAttribute("user", m_user);
+            return "index";
+        } else {
+            model.addAttribute("errors", "该用户尚未注册");
+            return "login";
+        }
     }
 
     @RequestMapping("/register")
@@ -81,8 +90,16 @@ public class UserController {
     }
 
     @RequestMapping("/addUser")
-    public String addUser(Model model, User user) {
+    public String addUser(Model model, UserVo userVo) {
 
+        User user = new User();
+        user.setUserName(userVo.getUserName());
+        user.setUserPwd(userVo.getUserName());
+        user.setUserPhone(userVo.getUserName());
+        user.setUserName(userVo.getUserName());
+        user.setUserName(userVo.getUserName());
+        user.setUserName(userVo.getUserName());
+        user.setUserName(userVo.getUserName());
         userService.addUser(user);
         return "redirect:/index.jsp";
     }
