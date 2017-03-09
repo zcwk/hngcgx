@@ -1,4 +1,6 @@
-<%@ page contentType="text/html; charset=utf-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 
 <%
     String path = request.getContextPath();
@@ -40,13 +42,26 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script language="javascript">
+        function keywordfocus()
+        {
+            document.getElementById('error-show').style.display='none';
+        }
+    </script>
 </head>
 
 <body>
 
 <div class="container">
+
+    <div id="error-show" class="alert alert-danger" role="alert">
+        <c:forEach items="${errors}" var="error">
+            ${error}
+        </c:forEach>
+    </div>
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
+
             <div class="login-panel panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">登录</h3>
@@ -55,10 +70,10 @@
                     <form role="form">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="用户名" name="email" type="text" autofocus>
+                                <input class="form-control" oninput="keywordfocus();" placeholder="用户名" name="userName" type="text" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="密码" name="password" type="password"
+                                <input class="form-control" oninput="keywordfocus();" placeholder="密码" name="passWord" type="password"
                                        value="">
                             </div>
                             <div class="checkbox">
@@ -69,6 +84,7 @@
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
                             <a href="user/doLogin" class="btn btn-lg btn-success btn-block">登录</a>
+
                         </fieldset>
                     </form>
                 </div>

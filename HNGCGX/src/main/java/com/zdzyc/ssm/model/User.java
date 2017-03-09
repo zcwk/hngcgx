@@ -1,5 +1,7 @@
 package com.zdzyc.ssm.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -11,8 +13,10 @@ import java.util.Date;
 public class User implements Serializable {
     private Long id;
 
+    @NotEmpty(message = "{login.name.is.null}")
     private String userName;
 
+    @NotEmpty(message = "{login.password.is.null}")
     private String userPhone;
 
     private String userEmail;
