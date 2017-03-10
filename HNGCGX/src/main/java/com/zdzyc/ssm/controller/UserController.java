@@ -39,6 +39,12 @@ public class UserController {
         return "login";
     }
 
+    @RequestMapping("/goUserHomePage")
+    public String goUserHomePage() {
+
+        return "userPage";
+    }
+
     @RequestMapping("/doLogin")
     public String doLogin(@Validated @ModelAttribute("user") User user, BindingResult result, Model model) {
         //如果存在校验错误
