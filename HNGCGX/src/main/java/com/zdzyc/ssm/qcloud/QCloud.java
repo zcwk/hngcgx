@@ -12,7 +12,7 @@ import com.qcloud.cos.sign.Credentials;
 /**
  * Created by zhoudezheng on 2017/3/9.
  */
-public class Qcloud {
+public class QCloud {
 
     private static long appId = 1251496435;
     private static String secretId = "AKIDugGert1Ll15xc5uQIxY0JRO8sS3WoN2a";
@@ -21,20 +21,20 @@ public class Qcloud {
     private static String bucketName = "hngczlgx";
     private static COSClient cosClient;
 
-    public static Qcloud instance;
+    public static QCloud instance;
 
-    public static Qcloud getIstance() {
+    public static QCloud getIstance() {
         if (instance == null) {
-            synchronized (Qcloud.class) {
+            synchronized (QCloud.class) {
                 if (instance == null) {
-                    instance = new Qcloud();
+                    instance = new QCloud();
                 }
             }
         }
         return instance;
     }
 
-    private Qcloud() {
+    private QCloud() {
         // 初始化秘钥信息
         Credentials cred = new Credentials(appId, secretId, secretKey);
 
@@ -53,13 +53,13 @@ public class Qcloud {
      * @param loclPath local_file_1.txt
      * @return
      */
-    public static Requset uploadFile(String userId, String cosPath, String loclPath) {
-        Requset requset = CreateFolder("/" + userId + "/");
-        if (requset.getCode() == 0) {
+    public static Result uploadFile(String userId, String cosPath, String loclPath) {
+        Result result = CreateFolder("/image/" + userId + "/");
+        if (result.getCode() == 0) {
             UploadFileRequest uploadFileRequest = new UploadFileRequest(bucketName, cosPath, loclPath);
-            requset = JSON.parseObject(cosClient.uploadFile(uploadFileRequest), Requset.class);
+            result = JSON.parseObject(cosClient.uploadFile(uploadFileRequest), Result.class);
         }
-        return requset;
+        return result;
     }
 
 
@@ -68,13 +68,13 @@ public class Qcloud {
      *
      * @param cosPath "/sample_folder/"
      */
-    private static Requset CreateFolder(String cosPath) {
-        Requset requset = isHasFolder(cosPath);
-        if (requset.getCode() == 0) {
+    private static Result CreateFolder(String cosPath) {
+        Result result = isHasFolder(cosPath);
+        if (result.getCode() != 0) {
             CreateFolderRequest createFolderRequest = new CreateFolderRequest(bucketName, cosPath);
-            return JSON.parseObject(cosClient.createFolder(createFolderRequest), Requset.class);
+            return JSON.parseObject(cosClient.createFolder(createFolderRequest), Result.class);
         } else {
-            return requset;
+            return result;
         }
     }
 
@@ -82,9 +82,9 @@ public class Qcloud {
     /**
      * @param cosPath "/sample_folder/"
      */
-    private static Requset isHasFolder(String cosPath) {
+    private static Result isHasFolder(String cosPath) {
         StatFolderRequest statFolderRequest = new StatFolderRequest(bucketName, cosPath);
-        return JSON.parseObject(cosClient.statFolder(statFolderRequest), Requset.class);
+        return JSON.parseObject(cosClient.statFolder(statFolderRequest), Result.class);
     }
 
 }

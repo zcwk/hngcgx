@@ -9,13 +9,14 @@
         <result column="user_email" property="userEmail" jdbcType="VARCHAR"/>
         <result column="user_pwd" property="userPwd" jdbcType="VARCHAR"/>
         <result column="user_detail" property="userDetail" jdbcType="VARCHAR"/>
+        <result column="user_face" property="userFace" jdbcType="VARCHAR"/>
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
         <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP"/>
         <result column="is_delete" property="isDelete" jdbcType="TINYINT"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        id, user_name, user_phone, user_email, user_pwd, user_detail, create_time, modify_time,
+        id, user_name, user_phone, user_email, user_pwd, user_detail,user_face, create_time, modify_time,
         is_delete
     </sql>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
@@ -34,7 +35,7 @@
     </select>
 
     <insert id="addUser" parameterType="com.zdzyc.ssm.model.User" useGeneratedKeys="true" keyProperty="id">
-        insert into tb_user(user_name,user_phone,user_email,user_pwd,user_detail,create_time)
-        values(#{userName},#{userPhone},#{userEmail},#{userPwd},#{userDetail},#{createTime})
+        insert into tb_user(user_name,user_phone,user_email,user_pwd,user_detail,user_face,create_time)
+        values(#{userName},#{userPhone},#{userEmail},#{userPwd},#{userDetail},#{userFace},#{createTime})
     </insert>
 </mapper>

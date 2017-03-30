@@ -48,6 +48,9 @@
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4.3" />
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpmime:4.5.1" />
           <element id="library" level="project" name="Maven: org.json:json:20140107" />
+          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-api:5.0.0-M3" />
+          <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.0.0-M1" />
+          <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.0.0-M3" />
         </element>
       </element>
       <element id="directory" name="META-INF">

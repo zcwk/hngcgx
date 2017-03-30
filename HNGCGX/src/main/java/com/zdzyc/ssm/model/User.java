@@ -20,6 +20,8 @@ public class User implements Serializable {
 
     private String userEmail;
 
+    private String userFace;
+
     @NotEmpty(message = "{login.password.is.null}")
     private String userPwd;
 
@@ -61,6 +63,14 @@ public class User implements Serializable {
 
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
+    }
+
+    public String getUserFace() {
+        return userFace;
+    }
+
+    public void setUserFace(String userFace) {
+        this.userFace = userFace;
     }
 
     public String getUserPwd() {
@@ -110,8 +120,9 @@ public class User implements Serializable {
                 ", userName='" + userName + '\'' +
                 ", userPhone='" + userPhone + '\'' +
                 ", userEmail='" + userEmail + '\'' +
+                ", userFace='" + userFace + '\'' +
                 ", userPwd='" + userPwd + '\'' +
-                ", pwdSalt='" + userDetail + '\'' +
+                ", userDetail='" + userDetail + '\'' +
                 ", createTime=" + createTime +
                 ", modifyTime=" + modifyTime +
                 ", isDelete=" + isDelete +

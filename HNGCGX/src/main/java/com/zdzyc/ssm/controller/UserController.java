@@ -3,6 +3,8 @@ package com.zdzyc.ssm.controller;
 
 import com.zdzyc.ssm.model.User;
 import com.zdzyc.ssm.model.UserVo;
+import com.zdzyc.ssm.qcloud.QCloud;
+import com.zdzyc.ssm.qcloud.Result;
 import com.zdzyc.ssm.service.IUserService;
 import com.zdzyc.ssm.utils.Utils;
 import org.springframework.stereotype.Controller;
@@ -13,10 +15,13 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 
 
 @Controller
@@ -117,9 +122,34 @@ public class UserController {
             model.addAttribute("errors", "注册失败");
             return "register";
         }
-
-
     }
 
 
-}  
+    //修改头像
+    @RequestMapping("/editFaceSubmit")
+    public String editItemSubmit(MultipartFile pictureFile) throws Exception {
+
+        //原始文件名称
+        String pictureFile_name = pictureFile.getOriginalFilename();
+        //新文件名称
+        String newFileName = UUID.randomUUID().toString() + pictureFile_name.substring(pictureFile_name.lastIndexOf("."));
+
+        //上传图片
+        File uploadPic = new File("F:/develop/upload/temp/" + newFileName);
+
+        if (!uploadPic.exists()) {
+            uploadPic.mkdirs();
+        }
+        //向磁盘写文件
+        pictureFile.transferTo(uploadPic);
+
+        Result result = QCloud.getIstance().uploadFile("11", "", "");
+        if (result.getCode() == 0) {
+
+        }
+
+        return "userPage";
+
+    }
+
+}

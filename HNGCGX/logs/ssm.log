@@ -1,0 +1,514 @@
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.client.protocol.RequestAddCookies]CookieSpec selected: default
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.client.protocol.RequestAuthCache]Auth cache not set in the context
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection request: [route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 0 of 100; total allocated: 0 of 100]
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection leased: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.impl.execchain.MainClientExec]Opening connection {}->http://gz.file.myqcloud.com:80
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connecting to gz.file.myqcloud.com/14.119.113.149:80
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connection established 192.168.90.36:51299<->14.119.113.149:80
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-0: set socket timeout to 30000
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.impl.execchain.MainClientExec]Executing request GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.impl.execchain.MainClientExec]Proxy auth state: UNCHALLENGED
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 >> GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 >> Accept: */*
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 >> User-Agent: cos-java-sdk-v4.2
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 >> Authorization: vbaO5HKAdYFEeo7QRZlzYRnEItFhPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQzNjQyJnQ9MTQ4OTU0MzM0MiZyPTE1Mjg1MTgxNDEmZj0vMTI1MTQ5NjQzNS9obmdjemxneC8xMS8mYj1obmdjemxneA==
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 >> Host: gz.file.myqcloud.com
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 >> "GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 >> "Accept: */*[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 >> "User-Agent: cos-java-sdk-v4.2[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 >> "Authorization: vbaO5HKAdYFEeo7QRZlzYRnEItFhPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQzNjQyJnQ9MTQ4OTU0MzM0MiZyPTE1Mjg1MTgxNDEmZj0vMTI1MTQ5NjQzNS9obmdjemxneC8xMS8mYj1obmdjemxneA==[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 >> "Host: gz.file.myqcloud.com[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 >> "[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 << "HTTP/1.1 404 Not Found[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 << "Content-Length: 101[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 << "Date: Wed Mar 15 10:00:33 2017[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 << "Server: tencent-cos[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 << "x-cos-request-id: NThjOGEwNDFfYzZhMzNiXzRkMV8zNDVjZDY=[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 << "x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 << "[\r][\n]"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.wire]http-outgoing-0 << "{"code":-197,"message":"ERROR_CMD_FILE_NOTEXIST","request_id":"NThjOGEwNDFfYzZhMzNiXzRkMV8zNDVjZDY="}"
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 << HTTP/1.1 404 Not Found
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 << Content-Type: application/json; charset=utf-8
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 << Content-Length: 101
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 << Connection: keep-alive
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 << Date: Wed Mar 15 10:00:33 2017
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 << Server: tencent-cos
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 << x-cos-request-id: NThjOGEwNDFfYzZhMzNiXzRkMV8zNDVjZDY=
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.headers]http-outgoing-0 << x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.impl.execchain.MainClientExec]Connection can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection [id: 0][route: {}->http://gz.file.myqcloud.com:80] can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection released: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:02:23][org.apache.http.impl.execchain.MainClientExec]Cancelling request execution
+[DEBUG] [2017-03-15 10:03:06][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:03:06][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:03:08][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:03:08][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.client.protocol.RequestAddCookies]CookieSpec selected: default
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.client.protocol.RequestAuthCache]Auth cache not set in the context
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection request: [route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 0 of 100; total allocated: 0 of 100]
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection leased: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.impl.execchain.MainClientExec]Opening connection {}->http://gz.file.myqcloud.com:80
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connecting to gz.file.myqcloud.com/14.119.113.150:80
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connection established 192.168.90.36:52042<->14.119.113.150:80
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-0: set socket timeout to 30000
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.impl.execchain.MainClientExec]Executing request GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.impl.execchain.MainClientExec]Proxy auth state: UNCHALLENGED
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.headers]http-outgoing-0 >> GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.headers]http-outgoing-0 >> Accept: */*
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.headers]http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.headers]http-outgoing-0 >> User-Agent: cos-java-sdk-v4.2
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.headers]http-outgoing-0 >> Authorization: oqZPRZYR5O6yYh9UIEC+kluV5z5hPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQzNjg2JnQ9MTQ4OTU0MzM4NiZyPTUzMTIwMTUwNSZmPS8xMjUxNDk2NDM1L2huZ2N6bGd4LzExLyZiPWhuZ2N6bGd4
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.headers]http-outgoing-0 >> Host: gz.file.myqcloud.com
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.headers]http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.wire]http-outgoing-0 >> "GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1[\r][\n]"
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.wire]http-outgoing-0 >> "Accept: */*[\r][\n]"
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.wire]http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.wire]http-outgoing-0 >> "User-Agent: cos-java-sdk-v4.2[\r][\n]"
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.wire]http-outgoing-0 >> "Authorization: oqZPRZYR5O6yYh9UIEC+kluV5z5hPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQzNjg2JnQ9MTQ4OTU0MzM4NiZyPTUzMTIwMTUwNSZmPS8xMjUxNDk2NDM1L2huZ2N6bGd4LzExLyZiPWhuZ2N6bGd4[\r][\n]"
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.wire]http-outgoing-0 >> "Host: gz.file.myqcloud.com[\r][\n]"
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.wire]http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] [2017-03-15 10:03:09][org.apache.http.wire]http-outgoing-0 >> "[\r][\n]"
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.wire]http-outgoing-0 << "HTTP/1.1 404 Not Found[\r][\n]"
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.wire]http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.wire]http-outgoing-0 << "Content-Length: 101[\r][\n]"
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.wire]http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.wire]http-outgoing-0 << "Date: Wed Mar 15 10:01:20 2017[\r][\n]"
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.wire]http-outgoing-0 << "Server: tencent-cos[\r][\n]"
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.wire]http-outgoing-0 << "x-cos-request-id: NThjOGEwNzBfY2FhMzNiXzMzYThfMzE0YjQ5[\r][\n]"
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.wire]http-outgoing-0 << "x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=[\r][\n]"
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.wire]http-outgoing-0 << "[\r][\n]"
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.wire]http-outgoing-0 << "{"code":-197,"message":"ERROR_CMD_FILE_NOTEXIST","request_id":"NThjOGEwNzBfY2FhMzNiXzMzYThfMzE0YjQ5"}"
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.headers]http-outgoing-0 << HTTP/1.1 404 Not Found
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.headers]http-outgoing-0 << Content-Type: application/json; charset=utf-8
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.headers]http-outgoing-0 << Content-Length: 101
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.headers]http-outgoing-0 << Connection: keep-alive
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.headers]http-outgoing-0 << Date: Wed Mar 15 10:01:20 2017
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.headers]http-outgoing-0 << Server: tencent-cos
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.headers]http-outgoing-0 << x-cos-request-id: NThjOGEwNzBfY2FhMzNiXzMzYThfMzE0YjQ5
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.headers]http-outgoing-0 << x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.impl.execchain.MainClientExec]Connection can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection [id: 0][route: {}->http://gz.file.myqcloud.com:80] can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection released: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.impl.execchain.MainClientExec]Cancelling request execution
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:03:10][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:03:18][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:03:51][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:03:51][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-0: Close connection
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.client.protocol.RequestAddCookies]CookieSpec selected: default
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.client.protocol.RequestAuthCache]Auth cache not set in the context
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection request: [route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 0 of 100; total allocated: 0 of 100]
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection leased: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.impl.execchain.MainClientExec]Opening connection {}->http://gz.file.myqcloud.com:80
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connecting to gz.file.myqcloud.com/14.119.113.149:80
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connection established 192.168.90.36:52990<->14.119.113.149:80
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-0: set socket timeout to 30000
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.impl.execchain.MainClientExec]Executing request GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.impl.execchain.MainClientExec]Proxy auth state: UNCHALLENGED
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 >> GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 >> Accept: */*
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 >> User-Agent: cos-java-sdk-v4.2
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 >> Authorization: z+wIXivaD7OdTtd4QHLwOm8Qkk5hPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQzNzQ4JnQ9MTQ4OTU0MzQ0OCZyPTIwODA2MjIyODcmZj0vMTI1MTQ5NjQzNS9obmdjemxneC8xMS8mYj1obmdjemxneA==
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 >> Host: gz.file.myqcloud.com
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 >> "GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 >> "Accept: */*[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 >> "User-Agent: cos-java-sdk-v4.2[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 >> "Authorization: z+wIXivaD7OdTtd4QHLwOm8Qkk5hPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQzNzQ4JnQ9MTQ4OTU0MzQ0OCZyPTIwODA2MjIyODcmZj0vMTI1MTQ5NjQzNS9obmdjemxneC8xMS8mYj1obmdjemxneA==[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 >> "Host: gz.file.myqcloud.com[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 >> "[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 << "HTTP/1.1 404 Not Found[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 << "Content-Length: 101[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 << "Date: Wed Mar 15 10:02:19 2017[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 << "Server: tencent-cos[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 << "x-cos-request-id: NThjOGEwYWJfYzZhMzNiXzRhY18zMmU4ODk=[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 << "x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 << "[\r][\n]"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.wire]http-outgoing-0 << "{"code":-197,"message":"ERROR_CMD_FILE_NOTEXIST","request_id":"NThjOGEwYWJfYzZhMzNiXzRhY18zMmU4ODk="}"
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 << HTTP/1.1 404 Not Found
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 << Content-Type: application/json; charset=utf-8
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 << Content-Length: 101
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 << Connection: keep-alive
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 << Date: Wed Mar 15 10:02:19 2017
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 << Server: tencent-cos
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 << x-cos-request-id: NThjOGEwYWJfYzZhMzNiXzRhY18zMmU4ODk=
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.headers]http-outgoing-0 << x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.impl.execchain.MainClientExec]Connection can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection [id: 0][route: {}->http://gz.file.myqcloud.com:80] can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection released: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:04:09][org.apache.http.impl.execchain.MainClientExec]Cancelling request execution
+[DEBUG] [2017-03-15 10:17:20][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:17:20][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:17:22][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:17:22][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:17:23][org.apache.http.client.protocol.RequestAddCookies]CookieSpec selected: default
+[DEBUG] [2017-03-15 10:17:23][org.apache.http.client.protocol.RequestAuthCache]Auth cache not set in the context
+[DEBUG] [2017-03-15 10:17:23][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection request: [route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 0 of 100; total allocated: 0 of 100]
+[DEBUG] [2017-03-15 10:17:24][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection leased: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:17:24][org.apache.http.impl.execchain.MainClientExec]Opening connection {}->http://gz.file.myqcloud.com:80
+[DEBUG] [2017-03-15 10:17:24][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:17:24][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connecting to gz.file.myqcloud.com/14.119.113.149:80
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connection established 192.168.90.36:49508<->14.119.113.149:80
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-0: set socket timeout to 30000
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.impl.execchain.MainClientExec]Executing request GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.impl.execchain.MainClientExec]Proxy auth state: UNCHALLENGED
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 >> GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 >> Accept: */*
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 >> User-Agent: cos-java-sdk-v4.2
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 >> Authorization: m6Z7KEE9rSSVhGRqVULkcjiMC+xhPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ0NTQwJnQ9MTQ4OTU0NDI0MCZyPTgzNjU1OTgwOSZmPS8xMjUxNDk2NDM1L2huZ2N6bGd4LzExLyZiPWhuZ2N6bGd4
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 >> Host: gz.file.myqcloud.com
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 >> "GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 >> "Accept: */*[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 >> "User-Agent: cos-java-sdk-v4.2[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 >> "Authorization: m6Z7KEE9rSSVhGRqVULkcjiMC+xhPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ0NTQwJnQ9MTQ4OTU0NDI0MCZyPTgzNjU1OTgwOSZmPS8xMjUxNDk2NDM1L2huZ2N6bGd4LzExLyZiPWhuZ2N6bGd4[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 >> "Host: gz.file.myqcloud.com[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 >> "[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 << "HTTP/1.1 404 Not Found[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 << "Content-Length: 101[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 << "Date: Wed Mar 15 10:15:35 2017[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 << "Server: tencent-cos[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 << "x-cos-request-id: NThjOGEzYzdfYzZhMzNiXzRiZl8zMjU2MjU=[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 << "x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 << "[\r][\n]"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.wire]http-outgoing-0 << "{"code":-197,"message":"ERROR_CMD_FILE_NOTEXIST","request_id":"NThjOGEzYzdfYzZhMzNiXzRiZl8zMjU2MjU="}"
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 << HTTP/1.1 404 Not Found
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 << Content-Type: application/json; charset=utf-8
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 << Content-Length: 101
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 << Connection: keep-alive
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 << Date: Wed Mar 15 10:15:35 2017
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 << Server: tencent-cos
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 << x-cos-request-id: NThjOGEzYzdfYzZhMzNiXzRiZl8zMjU2MjU=
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.headers]http-outgoing-0 << x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.impl.execchain.MainClientExec]Connection can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection [id: 0][route: {}->http://gz.file.myqcloud.com:80] can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection released: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:17:25][org.apache.http.impl.execchain.MainClientExec]Cancelling request execution
+[DEBUG] [2017-03-15 10:18:48][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:18:54][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:18:56][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:18:56][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.client.protocol.RequestAddCookies]CookieSpec selected: default
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.client.protocol.RequestAuthCache]Auth cache not set in the context
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection request: [route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 0 of 100; total allocated: 0 of 100]
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection leased: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.execchain.MainClientExec]Opening connection {}->http://gz.file.myqcloud.com:80
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connecting to gz.file.myqcloud.com/14.119.113.149:80
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connection established 192.168.90.36:51005<->14.119.113.149:80
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-0: set socket timeout to 30000
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.execchain.MainClientExec]Executing request GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.execchain.MainClientExec]Proxy auth state: UNCHALLENGED
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 >> GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 >> Accept: */*
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 >> User-Agent: cos-java-sdk-v4.2
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 >> Authorization: m/g9hLlB0dN7Mp9C2hA5z43dddlhPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ0NjM0JnQ9MTQ4OTU0NDMzNCZyPTExNDk1NTI1NDkmZj0vMTI1MTQ5NjQzNS9obmdjemxneC8xMS8mYj1obmdjemxneA==
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 >> Host: gz.file.myqcloud.com
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 >> "GET /files/v2/1251496435/hngczlgx/11/?op=stat HTTP/1.1[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 >> "Accept: */*[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 >> "User-Agent: cos-java-sdk-v4.2[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 >> "Authorization: m/g9hLlB0dN7Mp9C2hA5z43dddlhPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ0NjM0JnQ9MTQ4OTU0NDMzNCZyPTExNDk1NTI1NDkmZj0vMTI1MTQ5NjQzNS9obmdjemxneC8xMS8mYj1obmdjemxneA==[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 >> "Host: gz.file.myqcloud.com[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 >> "[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 << "HTTP/1.1 404 Not Found[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 << "Content-Length: 101[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 << "Date: Wed Mar 15 10:17:08 2017[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 << "Server: tencent-cos[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 << "x-cos-request-id: NThjOGE0MjRfYzlhMzNiXzdjYjNfMmY0ZmEx[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 << "x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 << "[\r][\n]"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.wire]http-outgoing-0 << "{"code":-197,"message":"ERROR_CMD_FILE_NOTEXIST","request_id":"NThjOGE0MjRfYzlhMzNiXzdjYjNfMmY0ZmEx"}"
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 << HTTP/1.1 404 Not Found
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 << Content-Type: application/json; charset=utf-8
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 << Content-Length: 101
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 << Connection: keep-alive
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 << Date: Wed Mar 15 10:17:08 2017
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 << Server: tencent-cos
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 << x-cos-request-id: NThjOGE0MjRfYzlhMzNiXzdjYjNfMmY0ZmEx
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.headers]http-outgoing-0 << x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.execchain.MainClientExec]Connection can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection [id: 0][route: {}->http://gz.file.myqcloud.com:80] can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection released: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:18:58][org.apache.http.impl.execchain.MainClientExec]Cancelling request execution
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-0: Close connection
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.client.protocol.RequestAddCookies]CookieSpec selected: default
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.client.protocol.RequestAuthCache]Auth cache not set in the context
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection request: [route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 0 of 100; total allocated: 0 of 100]
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection leased: [id: 1][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.execchain.MainClientExec]Opening connection {}->http://gz.file.myqcloud.com:80
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connecting to gz.file.myqcloud.com/14.119.113.149:80
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connection established 192.168.90.36:51263<->14.119.113.149:80
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-1: set socket timeout to 30000
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.execchain.MainClientExec]Executing request POST /files/v2/1251496435/hngczlgx/11/ HTTP/1.1
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.execchain.MainClientExec]Proxy auth state: UNCHALLENGED
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 >> POST /files/v2/1251496435/hngczlgx/11/ HTTP/1.1
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 >> Accept: */*
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 >> Connection: Keep-Alive
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 >> User-Agent: cos-java-sdk-v4.2
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 >> Authorization: fMnncnhnoKaMl4sG3WCqJzDG3lthPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ0NjU0JnQ9MTQ4OTU0NDM1NCZyPTEzMTEzMTIxOTcmZj0vMTI1MTQ5NjQzNS9obmdjemxneC8xMS8mYj1obmdjemxneA==
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 >> Content-Type: application/json
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 >> Content-Length: 29
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 >> Host: gz.file.myqcloud.com
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 >> Accept-Encoding: gzip,deflate
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 >> "POST /files/v2/1251496435/hngczlgx/11/ HTTP/1.1[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 >> "Accept: */*[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 >> "User-Agent: cos-java-sdk-v4.2[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 >> "Authorization: fMnncnhnoKaMl4sG3WCqJzDG3lthPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ0NjU0JnQ9MTQ4OTU0NDM1NCZyPTEzMTEzMTIxOTcmZj0vMTI1MTQ5NjQzNS9obmdjemxneC8xMS8mYj1obmdjemxneA==[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 >> "Content-Length: 29[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 >> "Host: gz.file.myqcloud.com[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 >> "[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 >> "{"op":"create","biz_attr":""}"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 << "Content-Length: 110[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 << "Date: Wed Mar 15 10:17:24 2017[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 << "Server: tencent-cos[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 << "x-cos-request-id: NThjOGE0MzRfYzhhMzNiXzU0NzlfMmViOGM1[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 << "[\r][\n]"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.wire]http-outgoing-1 << "{"code":0,"message":"success","request_id":"NThjOGE0MzRfYzhhMzNiXzU0NzlfMmViOGM1","data":{"ctime":1489544244}}"
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 << HTTP/1.1 200 OK
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 << Content-Type: application/json; charset=utf-8
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 << Content-Length: 110
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 << Connection: keep-alive
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 << Date: Wed Mar 15 10:17:24 2017
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 << Server: tencent-cos
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.headers]http-outgoing-1 << x-cos-request-id: NThjOGE0MzRfYzhhMzNiXzU0NzlfMmViOGM1
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.execchain.MainClientExec]Connection can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection [id: 1][route: {}->http://gz.file.myqcloud.com:80] can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection released: [id: 1][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:19:14][org.apache.http.impl.execchain.MainClientExec]Cancelling request execution
+[DEBUG] [2017-03-15 10:19:26][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:19:26][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:19:26][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-1: Close connection
+[WARN] [2017-03-15 10:19:26][com.qcloud.cos.COSClient]uploadFile occur a exception, request:bucketName:hngczlgx, cosPath:, local_path:, bizAttr:, uploadFromBuffer:false, insertonly:1, message:{"code":-1,"message":" is not cos file path! Tips: make sure not ends with /"}
+[DEBUG] [2017-03-15 10:24:25][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:24:25][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:24:25][org.apache.http.client.protocol.RequestAddCookies]CookieSpec selected: default
+[DEBUG] [2017-03-15 10:24:25][org.apache.http.client.protocol.RequestAuthCache]Auth cache not set in the context
+[DEBUG] [2017-03-15 10:24:25][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection request: [route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 0 of 100; total allocated: 0 of 100]
+[DEBUG] [2017-03-15 10:24:25][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection leased: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:24:25][org.apache.http.impl.execchain.MainClientExec]Opening connection {}->http://gz.file.myqcloud.com:80
+[DEBUG] [2017-03-15 10:24:27][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:24:27][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:24:29][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:24:29][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connecting to gz.file.myqcloud.com/14.119.113.149:80
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connection established 192.168.90.36:56573<->14.119.113.149:80
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-0: set socket timeout to 30000
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.execchain.MainClientExec]Executing request GET /files/v2/1251496435/hngczlgx/image11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.execchain.MainClientExec]Proxy auth state: UNCHALLENGED
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> GET /files/v2/1251496435/hngczlgx/image11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> Accept: */*
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> User-Agent: cos-java-sdk-v4.2
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> Authorization: bt0vE/WYN5fU39EdhUWUenZ+aJBhPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ0OTY1JnQ9MTQ4OTU0NDY2NSZyPTMwNDgyMjk2MyZmPS8xMjUxNDk2NDM1L2huZ2N6bGd4L2ltYWdlMTEvJmI9aG5nY3psZ3g=
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> Host: gz.file.myqcloud.com
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "GET /files/v2/1251496435/hngczlgx/image11/?op=stat HTTP/1.1[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "Accept: */*[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "User-Agent: cos-java-sdk-v4.2[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "Authorization: bt0vE/WYN5fU39EdhUWUenZ+aJBhPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ0OTY1JnQ9MTQ4OTU0NDY2NSZyPTMwNDgyMjk2MyZmPS8xMjUxNDk2NDM1L2huZ2N6bGd4L2ltYWdlMTEvJmI9aG5nY3psZ3g=[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "Host: gz.file.myqcloud.com[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "HTTP/1.1 404 Not Found[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "Content-Length: 101[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "Date: Wed Mar 15 10:22:40 2017[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "Server: tencent-cos[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "x-cos-request-id: NThjOGE1NzBfY2VhMzNiXzU4OTdfMzA4OTdi[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "{"code":-197,"message":"ERROR_CMD_FILE_NOTEXIST","request_id":"NThjOGE1NzBfY2VhMzNiXzU4OTdfMzA4OTdi"}"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << HTTP/1.1 404 Not Found
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << Content-Type: application/json; charset=utf-8
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << Content-Length: 101
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << Connection: keep-alive
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << Date: Wed Mar 15 10:22:40 2017
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << Server: tencent-cos
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << x-cos-request-id: NThjOGE1NzBfY2VhMzNiXzU4OTdfMzA4OTdi
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.execchain.MainClientExec]Connection can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection [id: 0][route: {}->http://gz.file.myqcloud.com:80] can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection released: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.execchain.MainClientExec]Cancelling request execution
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.client.protocol.RequestAddCookies]CookieSpec selected: default
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.client.protocol.RequestAuthCache]Auth cache not set in the context
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection request: [route: {}->http://gz.file.myqcloud.com:80][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection leased: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-0: set socket timeout to 30000
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.execchain.MainClientExec]Executing request POST /files/v2/1251496435/hngczlgx/image11/ HTTP/1.1
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.execchain.MainClientExec]Proxy auth state: UNCHALLENGED
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> POST /files/v2/1251496435/hngczlgx/image11/ HTTP/1.1
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> Accept: */*
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> User-Agent: cos-java-sdk-v4.2
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> Authorization: tmHPrFqRZE/H+i2XsHHzkFrh+BthPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ0OTcwJnQ9MTQ4OTU0NDY3MCZyPTkxMzU3Nzk2NCZmPS8xMjUxNDk2NDM1L2huZ2N6bGd4L2ltYWdlMTEvJmI9aG5nY3psZ3g=
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> Content-Type: application/json
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> Content-Length: 29
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> Host: gz.file.myqcloud.com
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "POST /files/v2/1251496435/hngczlgx/image11/ HTTP/1.1[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "Accept: */*[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "User-Agent: cos-java-sdk-v4.2[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "Authorization: tmHPrFqRZE/H+i2XsHHzkFrh+BthPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ0OTcwJnQ9MTQ4OTU0NDY3MCZyPTkxMzU3Nzk2NCZmPS8xMjUxNDk2NDM1L2huZ2N6bGd4L2ltYWdlMTEvJmI9aG5nY3psZ3g=[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "Content-Length: 29[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "Host: gz.file.myqcloud.com[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 >> "{"op":"create","biz_attr":""}"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "Content-Length: 110[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "Date: Wed Mar 15 10:22:41 2017[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "Server: tencent-cos[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "x-cos-request-id: NThjOGE1NzFfY2VhMzNiXzU4YTJfMmY1ZjE2[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "[\r][\n]"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.wire]http-outgoing-0 << "{"code":0,"message":"success","request_id":"NThjOGE1NzFfY2VhMzNiXzU4YTJfMmY1ZjE2","data":{"ctime":1489544561}}"
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << HTTP/1.1 200 OK
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << Content-Type: application/json; charset=utf-8
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << Content-Length: 110
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << Connection: keep-alive
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << Date: Wed Mar 15 10:22:41 2017
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << Server: tencent-cos
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.headers]http-outgoing-0 << x-cos-request-id: NThjOGE1NzFfY2VhMzNiXzU4YTJfMmY1ZjE2
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.execchain.MainClientExec]Connection can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection [id: 0][route: {}->http://gz.file.myqcloud.com:80] can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection released: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:24:30][org.apache.http.impl.execchain.MainClientExec]Cancelling request execution
+[DEBUG] [2017-03-15 10:24:32][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 10:24:33][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[WARN] [2017-03-15 10:24:33][com.qcloud.cos.COSClient]uploadFile occur a exception, request:bucketName:hngczlgx, cosPath:, local_path:, bizAttr:, uploadFromBuffer:false, insertonly:1, message:{"code":-1,"message":" is not cos file path! Tips: make sure not ends with /"}
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.client.protocol.RequestAddCookies]CookieSpec selected: default
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.client.protocol.RequestAuthCache]Auth cache not set in the context
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection request: [route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 0 of 100; total allocated: 0 of 100]
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection leased: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.impl.execchain.MainClientExec]Opening connection {}->http://gz.file.myqcloud.com:80
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connecting to gz.file.myqcloud.com/14.119.113.149:80
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.impl.conn.DefaultHttpClientConnectionOperator]Connection established 192.168.90.36:57192<->14.119.113.149:80
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-0: set socket timeout to 30000
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.impl.execchain.MainClientExec]Executing request GET /files/v2/1251496435/hngczlgx/image/11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.impl.execchain.MainClientExec]Proxy auth state: UNCHALLENGED
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 >> GET /files/v2/1251496435/hngczlgx/image/11/?op=stat HTTP/1.1
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 >> Accept: */*
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 >> User-Agent: cos-java-sdk-v4.2
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 >> Authorization: m2+IgUUsg+ujkKwqO/V81W8rAdphPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ1MDA4JnQ9MTQ4OTU0NDcwOCZyPTE1NDc3MjE4MjEmZj0vMTI1MTQ5NjQzNS9obmdjemxneC9pbWFnZS8xMS8mYj1obmdjemxneA==
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 >> Host: gz.file.myqcloud.com
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 >> "GET /files/v2/1251496435/hngczlgx/image/11/?op=stat HTTP/1.1[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 >> "Accept: */*[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 >> "User-Agent: cos-java-sdk-v4.2[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 >> "Authorization: m2+IgUUsg+ujkKwqO/V81W8rAdphPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ1MDA4JnQ9MTQ4OTU0NDcwOCZyPTE1NDc3MjE4MjEmZj0vMTI1MTQ5NjQzNS9obmdjemxneC9pbWFnZS8xMS8mYj1obmdjemxneA==[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 >> "Host: gz.file.myqcloud.com[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 >> "[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 << "HTTP/1.1 404 Not Found[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 << "Content-Length: 101[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 << "Date: Wed Mar 15 10:23:19 2017[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 << "Server: tencent-cos[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 << "x-cos-request-id: NThjOGE1OTdfYzdhMzNiXzRhMF8yZmQ5ZDM=[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 << "x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 << "[\r][\n]"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.wire]http-outgoing-0 << "{"code":-197,"message":"ERROR_CMD_FILE_NOTEXIST","request_id":"NThjOGE1OTdfYzdhMzNiXzRhMF8yZmQ5ZDM="}"
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 << HTTP/1.1 404 Not Found
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 << Content-Type: application/json; charset=utf-8
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 << Content-Length: 101
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 << Connection: keep-alive
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 << Date: Wed Mar 15 10:23:19 2017
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 << Server: tencent-cos
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 << x-cos-request-id: NThjOGE1OTdfYzdhMzNiXzRhMF8yZmQ5ZDM=
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.headers]http-outgoing-0 << x-cos-trace-id: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTBjYzE2MjAxN2M1MzJiOTdkZjMxMDVlYTZjN2FiMmI0ZTE5YjgzMDQ2NWNjNTE5OWNmMjdjODhlN2M2OTY4MGE=
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.impl.execchain.MainClientExec]Connection can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection [id: 0][route: {}->http://gz.file.myqcloud.com:80] can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection released: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:25:08][org.apache.http.impl.execchain.MainClientExec]Cancelling request execution
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.client.protocol.RequestAddCookies]CookieSpec selected: default
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.client.protocol.RequestAuthCache]Auth cache not set in the context
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection request: [route: {}->http://gz.file.myqcloud.com:80][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection leased: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-0: set socket timeout to 30000
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.impl.execchain.MainClientExec]Executing request POST /files/v2/1251496435/hngczlgx/image/11/ HTTP/1.1
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.impl.execchain.MainClientExec]Proxy auth state: UNCHALLENGED
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 >> POST /files/v2/1251496435/hngczlgx/image/11/ HTTP/1.1
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 >> Accept: */*
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 >> User-Agent: cos-java-sdk-v4.2
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 >> Authorization: rH1jM5aU0MaVfE+ycp55bK0n6khhPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ1MDA5JnQ9MTQ4OTU0NDcwOSZyPTEzMTY0MTU0NjcmZj0vMTI1MTQ5NjQzNS9obmdjemxneC9pbWFnZS8xMS8mYj1obmdjemxneA==
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 >> Content-Type: application/json
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 >> Content-Length: 29
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 >> Host: gz.file.myqcloud.com
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 >> "POST /files/v2/1251496435/hngczlgx/image/11/ HTTP/1.1[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 >> "Accept: */*[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 >> "User-Agent: cos-java-sdk-v4.2[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 >> "Authorization: rH1jM5aU0MaVfE+ycp55bK0n6khhPTEyNTE0OTY0MzUmaz1BS0lEdWdHZXJ0MUxsMTV4YzV1UUl4WTBKUk84c1MzV29OMmEmZT0xNDg5NTQ1MDA5JnQ9MTQ4OTU0NDcwOSZyPTEzMTY0MTU0NjcmZj0vMTI1MTQ5NjQzNS9obmdjemxneC9pbWFnZS8xMS8mYj1obmdjemxneA==[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 >> "Content-Length: 29[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 >> "Host: gz.file.myqcloud.com[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 >> "[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 >> "{"op":"create","biz_attr":""}"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 << "Content-Length: 110[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 << "Date: Wed Mar 15 10:23:19 2017[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 << "Server: tencent-cos[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 << "x-cos-request-id: NThjOGE1OTdfYzdhMzNiXzQ5Yl8yZmMzZWM=[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 << "[\r][\n]"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.wire]http-outgoing-0 << "{"code":0,"message":"success","request_id":"NThjOGE1OTdfYzdhMzNiXzQ5Yl8yZmMzZWM=","data":{"ctime":1489544599}}"
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 << HTTP/1.1 200 OK
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 << Content-Type: application/json; charset=utf-8
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 << Content-Length: 110
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 << Connection: keep-alive
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 << Date: Wed Mar 15 10:23:19 2017
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 << Server: tencent-cos
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.headers]http-outgoing-0 << x-cos-request-id: NThjOGE1OTdfYzdhMzNiXzQ5Yl8yZmMzZWM=
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.impl.execchain.MainClientExec]Connection can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection [id: 0][route: {}->http://gz.file.myqcloud.com:80] can be kept alive indefinitely
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Connection released: [id: 0][route: {}->http://gz.file.myqcloud.com:80][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] [2017-03-15 10:25:09][org.apache.http.impl.execchain.MainClientExec]Cancelling request execution
+[WARN] [2017-03-15 10:25:09][com.qcloud.cos.COSClient]uploadFile occur a exception, request:bucketName:hngczlgx, cosPath:, local_path:, bizAttr:, uploadFromBuffer:false, insertonly:1, message:{"code":-1,"message":" is not cos file path! Tips: make sure not ends with /"}
+[DEBUG] [2017-03-15 13:55:32][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing expired connections
+[DEBUG] [2017-03-15 13:55:32][org.apache.http.impl.conn.PoolingHttpClientConnectionManager]Closing connections idle longer than 5000 MILLISECONDS
+[DEBUG] [2017-03-15 13:55:32][org.apache.http.impl.conn.DefaultManagedHttpClientConnection]http-outgoing-0: Close connection

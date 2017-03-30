@@ -26,6 +26,7 @@ CREATE TABLE `tb_user` (
   `user_email` varchar(255) default NULL COMMENT '邮箱地址',
   `user_pwd` varchar(32) default NULL COMMENT '加盐后用户密码',
   `user_detail` varchar(456) default NULL COMMENT 'MD5盐',
+  `user_face` varchar(456) default NULL COMMENT 'MD5盐',
   `create_time` datetime default NULL COMMENT '创建时间',
   `modify_time` datetime default NULL COMMENT '最后修改时间',
   `is_delete` tinyint(4) default NULL COMMENT '是否删除，0-未删除；1-已删除',

@@ -22,6 +22,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/mybatis-generator" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/test" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target/HNGCGX" />
       <excludeFolder url="file://$MODULE_DIR$/target/HNGCGX-1.0-SNAPSHOT" />
       <excludeFolder url="file://$MODULE_DIR$/target/classes" />
@@ -71,5 +72,8 @@
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.json:json:20140107" level="project" />
+    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.0.0-M3" level="project" />
+    <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.0.0-M1" level="project" />
+    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-commons:1.0.0-M3" level="project" />
   </component>
 </module>
