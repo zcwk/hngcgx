@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7cf7713f-7c5c-44fb-ac57-fe4d092f7ba2" name="hngcgx" url="http://106.14.168.5">
+        <fileTransfer host="106.14.168.5" port="21" rootFolder="/Program Files (x86)/Apache Software Foundation/Tomcat 7.0/webapps/HNGCGX">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

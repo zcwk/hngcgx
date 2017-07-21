@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="HNGCGX">
+    <output-path>$PROJECT_DIR$/out/artifacts/HNGCGX</output-path>
+    <root id="archive" name="HNGCGX.war" />
+  </artifact>
+</component>
