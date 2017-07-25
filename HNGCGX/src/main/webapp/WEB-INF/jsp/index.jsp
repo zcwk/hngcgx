@@ -42,6 +42,24 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="vendor/raphael/raphael.min.js"></script>
+    <script src="vendor/morrisjs/morris.min.js"></script>
+    <script src="data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="dist/js/sb-admin-2.js"></script>
     <style>
         .carousel-inner img {
             width: 100%;
@@ -82,7 +100,7 @@
                                     href="user/goUserHomePage"
                                 </c:otherwise>
                             </c:choose>
-                            ><i class="fa fa-user fa-fw"></i> 个人信息</a>
+                    ><i class="fa fa-user fa-fw"></i> 个人信息</a>
                     </li>
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设置</a>
                     </li>
@@ -228,325 +246,119 @@
         <!-- /.navbar-static-side -->
     </nav>
 
+
     <div id="page-wrapper">
-        <!-- /.row -->
         <div class="row">
-            <div class="col-lg-3 col-md-6" style="margin-top: 20px">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i class="fa fa-comments fa-5x"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">26</div>
-                                <div>住宅建筑</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6" style="margin-top: 20px">
-                <div class="panel panel-green">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i class="fa fa-tasks fa-5x"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">12</div>
-                                <div>商业建筑</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6" style="margin-top: 20px">
-                <div class="panel panel-yellow">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i class="fa fa-shopping-cart fa-5x"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">124</div>
-                                <div>桥梁道路</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6" style="margin-top: 20px">
-                <div class="panel panel-red">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i class="fa fa-support fa-5x"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">13</div>
-                                <div>园艺盆栽</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
+            <div class="col-lg-12" style="margin-top: 15px">
+                <%--空隙--%>
             </div>
         </div>
-        <!-- /.row -->
-        <div class="row">
-            <div class="col-lg-8">
 
+        <div class="row">
+            <%--下载资料--%>
+            <div class="col-lg-8">
                 <%--推荐广告--%>
                 <div class="" style="height: 400px">
                     <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="2000">
                         <%--@*轮播指标*@--%>
                         <ol class="carousel-indicators">
-                            <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel1" data-slide-to="1"></li>
-                            <li data-target="#myCarousel1" data-slide-to="2"></li>
-                            <li data-target="#myCarousel1" data-slide-to="3"></li>
+                            <c:forEach var="ads" items="${ads}">
+                                <c:choose>
+                                    <c:when test="${ads.index==0}">
+                                        <li data-target="#myCarousel1" data-slide-to="${ads.index}" class="active"></li>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <li data-target="#myCarousel1" data-slide-to="${ads.index}"></li>
+                                    </c:otherwise>
+                                </c:choose>
+                            </c:forEach>
                         </ol>
                         <%--@*轮播项目*@--%>
                         <div class="carousel-inner">
+                            <c:forEach var="ads" items="${ads}">
+                            <c:choose>
+                            <c:when test="${ads.index==0}">
                             <div class="item active">
-                                <img alt="first" src="img/index/che1.jpg" style="height: 400px;"/>
-                                <div class="carousel-caption">标题 1</div>
-                            </div>
-                            <div class="item">
-                                <img alt="first" src="img/index/che2.jpg" style="height: 400px"/>
-                                <div class="carousel-caption">标题 2</div>
-                            </div>
-                            <div class="item">
-                                <img alt="first" src="img/index/che3.jpeg" style="height: 400px"/>
-                                <div class="carousel-caption">标题 3</div>
-                            </div>
-                            <div class="item">
-                                <img alt="first" src="img/index/che4.jpeg" style="height: 400px"/>
-                                <div class="carousel-caption">标题 4</div>
+                                </c:when>
+                                <c:otherwise>
+                                <div class="item">
+                                    </c:otherwise>
+                                    </c:choose>
+                                    <img alt="first" src="${ads.image}" style="height: 400px"/>
+                                    <div class="carousel-caption">${ads.project.projectTitle}</div>
+                                </div>
+                                </c:forEach>
                             </div>
                         </div>
+                        <!-- 轮播（Carousel）导航 -->
+                        <a class="carousel-control left" href="#myCarousel1"
+                           data-slide="prev" style="height: 400px; margin-left: 15px">&lsaquo;</a>
+                        <a class="carousel-control right" href="#myCarousel1"
+                           data-slide="next" style="height: 400px;margin-right: 15px">&rsaquo;</a>
                     </div>
-                    <!-- 轮播（Carousel）导航 -->
-                    <a class="carousel-control left" href="#myCarousel1"
-                       data-slide="prev" style="height: 400px; margin-left: 15px">&lsaquo;</a>
-                    <a class="carousel-control right" href="#myCarousel1"
-                       data-slide="next" style="height: 400px;margin-right: 15px">&rsaquo;</a>
-                </div>
 
-
-                <!-- /.panel 资料展示-->
-                <div class="panel panel-default" style="margin-top: 20px">
-                    <div class="panel-heading">
-                        <i class="fa fa-clock-o fa-fw"></i> 共享资料下载区
-                    </div>
-                    <div class="container-fluid">
-
-                        <%
-                            if (10 % 3 == 0) {
-                                for (int i = 0; i < 10 / 3; i++) {
-                        %>
-                        <div class="row" style="margin-top: 15px">
-                            <%
-                                for (int j = 0; j < 3; j++) {
-                            %>
-
-                            <div class="col-xs-6 col-md-4">
-                                <% if (j == 0) {%>
-                                <div class="panel panel-default">
-                                    <% } else if (j == 1) {%>
-                                    <div class="panel panel-primary">
-                                        <% } else if (j == 2) {%>
-                                        <div class="panel panel-success">
-                                            <% }%>
-                                            <div class="panel-heading">
-                                                <div>
-
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> 资料下载
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <!-- /.row -->
+                            <c:forEach var="projectAll" items="${project.list}">
+                                <div class="row">
+                                    <c:forEach var="project" items="${projectAll}">
+                                        <div class="col-lg-4">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                        ${project.projectTitle}
                                                 </div>
-                                            </div>
-                                            <div class="panel-body">
-                                                <p>标题</p>
-                                            </div>
-                                            <div class="panel-footer">
-                                                Panel Footer
+                                                <div class="panel-body">
+                                                    <img src="${project.images}"></img>
+                                                </div>
+                                                <div class="panel-footer">
+                                                        ${project.projectDetail}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <%}%>
+                                    </c:forEach>
                                 </div>
-                                <%
-                                    }
-                                } else {
-                                    for (int i = 0; i < (10 / 3) + 1; i++) {
-                                %>
-                                <div class="row" style="margin-top: 15px">
-                                    <%
-                                        for (int j = 0; j < (10 - (i * 3) > 3 ? 3 : 10 - (i * 3)); j++) {
-                                    %>
-
-                                    <div class="col-xs-6 col-md-4">
-                                        <div class="panel panel-default">
-                                            <div class="panel-body" style="padding: 0px;">
-                                                <div style="width: 100% ; height: 180px">
-                                                    <img src="img/index/che1.jpg"
-                                                         style=" width: 100%; height: 100%">
-                                                </div>
-                                                <p style="margin-top:5px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap">
-                                                    标题。。。标题。。标题。。标题。。标题。。标题。。标题。。标题。。标题。。</p>
-                                            </div>
-                                            <div class="panel-footer"
-                                                 style="padding: 5px; display: flex;align-items: center">
-                                                <div>
-                                                    <img style=" width: 40px; height: 40px; "
-                                                         src="img/index/che1.jpg">
-                                                </div>
-                                                <div style="margin-left: 5px;width: 100%">
-                                                    <p style="margin:0; margin-right:40px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap">
-                                                        张三 </p>
-                                                    <p style="margin:0; margin-right:40px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap">
-                                                        2020年12月12日分享020年12月12日分享020年12月12日分享</p></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <%}%>
-                                </div>
-                                <%
-                                        }
-                                    }
-                                %>
-
-                            </div>
-                            <nav aria-label="..." style="text-align: center">
-                                <ul class="pagination">
-                                    <li class="disabled">
-                              <span>
-                                <span aria-hidden="true">&laquo;</span>
-                              </span>
-                                    </li>
-                                    <li class="active">
-                                        <span>1 <span class="sr-only">(current)</span></span>
-                                    </li>
-                                </ul>
-                            </nav>
+                            </c:forEach>
                         </div>
-                        <!-- /.panel -->
+                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.col-lg-8 -->
-                    <div class="col-lg-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-bell fa-fw"></i> 下载排行
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <div class="list-group">
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-comment fa-fw"></i> New Comment
-                                        <span class="pull-right text-muted small"><em>4 minutes ago</em>
-                                    </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                        <span class="pull-right text-muted small"><em>12 minutes ago</em>
-                                    </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                        <span class="pull-right text-muted small"><em>27 minutes ago</em>
-                                    </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-tasks fa-fw"></i> New Task
-                                        <span class="pull-right text-muted small"><em>43 minutes ago</em>
-                                    </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                        <span class="pull-right text-muted small"><em>11:32 AM</em>
-                                    </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-bolt fa-fw"></i> Server Crashed!
-                                        <span class="pull-right text-muted small"><em>11:13 AM</em>
-                                    </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-warning fa-fw"></i> Server Not Responding
-                                        <span class="pull-right text-muted small"><em>10:57 AM</em>
-                                    </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-shopping-cart fa-fw"></i> New Order Placed
-                                        <span class="pull-right text-muted small"><em>9:49 AM</em>
-                                    </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-money fa-fw"></i> Payment Received
-                                        <span class="pull-right text-muted small"><em>Yesterday</em>
-                                    </span>
-                                    </a>
-                                </div>
-                                <!-- /.list-group -->
-                                <a href="#" class="btn btn-default btn-block">View All Alerts</a>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                    </div>
-                    <!-- /.col-lg-4 -->
                 </div>
-                <!-- /.row -->
+
+                <!-- 下载排行 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bell fa-fw"></i> 下载排行
+                        </div>
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <c:forEach var="download" items="${download}">
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-comment fa-fw"></i>${download.projectTitle}
+                                        <span class="pull-right text-muted small"><em>${download.createTime}</em>
+                            </span>
+                                    </a>
+                                </c:forEach>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /#page-wrapper -->
+            <!-- /.panel-body -->
         </div>
+        <!-- /.panel -->
+
     </div>
+    <!-- /.col-lg-4 -->
 </div>
-<!-- /#wrapper -->
+<!-- /.row -->
+</div>
 
-<!-- jQuery -->
-<script src="vendor/jquery/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Metis Menu Plugin JavaScript -->
-<script src="vendor/metisMenu/metisMenu.min.js"></script>
-
-<!-- Morris Charts JavaScript -->
-<script src="vendor/raphael/raphael.min.js"></script>
-<script src="vendor/morrisjs/morris.min.js"></script>
-<script src="data/morris-data.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="dist/js/sb-admin-2.js"></script>
-
+</div>
 </body>
 
 </html>
