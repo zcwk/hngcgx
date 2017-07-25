@@ -58,7 +58,7 @@ public class UserController {
             return "login";
         }
 
-        User m_user = userService.selectByName(user.getUserName());
+        User m_user = userService.selectByUserPhone(user.getUserPhone());
 
         if (!StringUtils.isEmpty(m_user)) {
             if (!m_user.getUserPwd().equals(user.getUserPwd())) {
@@ -92,22 +92,9 @@ public class UserController {
             return "register";
         }
 
-        if (!Utils.isMobile(userVo.getUserPhone())) {
-            model.addAttribute("errors", "请正确输入电话号码");
-            return "register";
-        }
-
-
         User user = new User();
-        user.setUserName(userVo.getUserName());
         user.setUserPwd(userVo.getUserPwd());
         user.setUserPhone(userVo.getUserPhone());
-        user.setUserEmail(userVo.getUserEmail());
-        user.setUserDetail(userVo.getUserDetail());
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
-        Date date = new Date();
-        df.format(date);
-        user.setCreateTime(date);
 
         Long count = null;
         try {

@@ -9,7 +9,7 @@ public interface IUserService {
 
     User selectByPrimaryKey(Long id);
 
-    User selectByName(String userName);
+    User selectByUserPhone(String phone);
 
     Long addUser(User user);
 

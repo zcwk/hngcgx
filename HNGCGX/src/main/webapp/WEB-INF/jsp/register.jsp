@@ -75,7 +75,6 @@
                         <fieldset>
                             <div class="form-top">
                                 <div class="form-top-left">
-                                    <h3>Step 1 / 2</h3>
                                     <p>Tell us who you are:</p>
                                 </div>
                                 <div class="form-top-right">
@@ -84,8 +83,8 @@
                             </div>
                             <div class="form-bottom">
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">用户名</label>
-                                    <input type="text" oninput="keywordfocus();" name="userName" placeholder="用户名..."
+                                    <label class="sr-only" for="form-first-name">手机号码</label>
+                                    <input type="text" oninput="keywordfocus();" name="userName" placeholder="请输入手机号码..."
                                            class="form-first-name form-control" id="form-first-name">
                                 </div>
                                 <div class="form-group">
@@ -98,41 +97,9 @@
                                     <input type="password" oninput="keywordfocus();" name="userPwd2" placeholder="确认密码..."
                                            class="form-repeat-password form-control" id="form-repeat-password">
                                 </div>
-                                <button type="button" class="btn btn-next">下一步</button>
+                                <button type="submit" class="btn">注册</button>
 
                                 <a href="user/goLogin" style="float: right; margin-top: 20px">有账号了直接登录</a>
-                            </div>
-                        </fieldset>
-
-                        <fieldset>
-                            <div class="form-top">
-                                <div class="form-top-left">
-                                    <h3>Step 2 / 2</h3>
-                                    <p>Set up your account:</p>
-                                </div>
-                                <div class="form-top-right">
-                                    <i class="fa fa-key"></i>
-                                </div>
-                            </div>
-                            <div class="form-bottom">
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-email">Email</label>
-                                    <input type="email" oninput="keywordfocus();" name="userEmail" placeholder="邮箱..."
-                                           class="form-email form-control" id="form-email">
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-email">Phone</label>
-                                    <input type="text" oninput="keywordfocus();" name="userPhone" placeholder="电话..."
-                                           class="form-email form-control" id="form-phone">
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-about-yourself">自我介绍</label>
-                                    <textarea name="userDetail" oninput="keywordfocus();" placeholder="自我介绍..."
-                                              class="form-about-yourself form-control"
-                                              id="form-about-yourself"></textarea>
-                                </div>
-                                <button type="button" class="btn btn-previous">上一步</button>
-                                <button type="submit" class="btn">注册</button>
                             </div>
                         </fieldset>
 

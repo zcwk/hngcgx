@@ -20,26 +20,28 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_project`;
 CREATE TABLE `tb_project` (
-  `id` bigint(11) NOT NULL auto_increment,
-  `user_id` bigint(11) NOT NULL,
-  `project_name` varchar(255) default NULL COMMENT '用户名',
-  `project_title` varchar(255) default NULL COMMENT '手机号',
-  `project_detail` varchar(1255) default NULL COMMENT '邮箱地址',
-  `project_type` bigint(11) default NULL COMMENT '加盐后用户密码',
-  `images` varchar(1255) default NULL COMMENT 'MD5盐',
-  `download_num` bigint(11) default NULL COMMENT '创建时间',
-  `star` bigint(11) default NULL COMMENT '最后修改时间',
-  `message_num` bigint(11) default NULL COMMENT '是否删除，0-未删除；1-已删除',
-  `create_time` datetime default NULL COMMENT '最后修改时间',
-  `modify_time` datetime default NULL COMMENT '最后修改时间',
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='用户登录表';
+  `project_id` bigint(11) NOT NULL AUTO_INCREMENT COMMENT '项目id',
+  `user_id` bigint(11) NOT NULL COMMENT '上传项目的人id',
+  `project_name` varchar(255) NOT NULL COMMENT '项目名称',
+  `project_title` varchar(255) NOT NULL COMMENT '项目title',
+  `project_detail` varchar(1255) default NULL COMMENT '项目详细',
+  `project_type` bigint(11) NOT NULL COMMENT '项目类型',
+  `images` varchar(1255) default NULL COMMENT '项目图片',
+  `download_num` bigint(11) default NULL COMMENT '下载次数',
+  `star` bigint(11) default NULL COMMENT '点赞数目',
+  `message_num` bigint(11) default NULL COMMENT '评论数目',
+  `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `modify_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '最后修改时间',
+  PRIMARY KEY  (`project_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='项目表';
 
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
-INSERT INTO `tb_project` VALUES ('1', '赵大宝', '13285250574', '1045221654@qq.com', '05126a423a9379d529e4ee61a212fa55', 'KJUYT5', '2016-07-15 23:38:56', '2016-07-15 23:39:09', '0');
-INSERT INTO `tb_project` VALUES ('2', '张三丰', '15985250574', '1198224554@qq.com', '98bd3a1bebde01ad363d3c5a0d1e56da', '656JHU', '2016-07-15 23:39:01', '2016-07-15 23:39:13', '0');
-INSERT INTO `tb_project` VALUES ('3', '王尼玛', '13685250574', '1256221654@qq.com', '5470db9b63c354f6c8d628b80ae2f3c3', '89UIKQ', '2016-07-15 23:39:05', '2016-07-15 23:39:16', '0');
-
+INSERT INTO `tb_project` (user_id, project_name,project_title,project_type)
+ VALUES
+ (111, '大楼建设', '中国第一大楼',  1),
+ (222, '大楼建设2', '中国第一大楼2', 2),
+ (333, '大楼建设3', '中国第一大楼3', 3),
+ (444, '大楼建设4', '中国第一大楼4',  4);
 

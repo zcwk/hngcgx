@@ -9,7 +9,7 @@ public interface UserMapper {
 
     User selectByPrimaryKey(Long id);
 
-    User selectByName(String userName);
+    User selectByUserPhone(String userPhone);
 
     Long addUser(User user);
 

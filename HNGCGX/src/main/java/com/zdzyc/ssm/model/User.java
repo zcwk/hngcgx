@@ -13,9 +13,10 @@ import java.util.Date;
 public class User implements Serializable {
     private Long id;
 
-    @NotEmpty(message = "{login.name.is.null}")
+
     private String userName;
 
+    @NotEmpty(message = "{login.phone.is.null}")
     private String userPhone;
 
     private String userEmail;
@@ -28,10 +29,6 @@ public class User implements Serializable {
     private String userDetail;
 
     private Date createTime;
-
-    private Date modifyTime;
-
-    private Byte isDelete;
 
     public Long getId() {
         return id;
@@ -97,22 +94,6 @@ public class User implements Serializable {
         this.createTime = createTime;
     }
 
-    public Date getModifyTime() {
-        return modifyTime;
-    }
-
-    public void setModifyTime(Date modifyTime) {
-        this.modifyTime = modifyTime;
-    }
-
-    public Byte getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Byte isDelete) {
-        this.isDelete = isDelete;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -124,8 +105,6 @@ public class User implements Serializable {
                 ", userPwd='" + userPwd + '\'' +
                 ", userDetail='" + userDetail + '\'' +
                 ", createTime=" + createTime +
-                ", modifyTime=" + modifyTime +
-                ", isDelete=" + isDelete +
                 '}';
     }
 }
