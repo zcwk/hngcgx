@@ -60,6 +60,11 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="dist/js/sb-admin-2.js"></script>
+
+    <script type="text/javascript" src="js/paginator/bootstrap-paginator.js"></script>
+    <script type="text/javascript" src="js/paginator/jBootsrapPage.js"></script>
+    <!-- Morris Charts CSS -->
+    <link href="js/paginator/jBootsrapPage.css" rel="stylesheet">
     <style>
         .carousel-inner img {
             width: 100%;
@@ -297,7 +302,7 @@
                            data-slide="next" style="height: 400px;margin-right: 15px">&rsaquo;</a>
                     </div>
 
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" style="margin-top: 10px">
                         <div class="panel-heading">
                             <i class="fa fa-bar-chart-o fa-fw"></i> 资料下载
                         </div>
@@ -325,6 +330,27 @@
                             </c:forEach>
                         </div>
                         <!-- /.panel-body -->
+                        <div class="panel-footer">
+                            <!-- 下面是控制分页控件，必须要是ul元素才行 -->
+                            <ul class="pagination"></ul>
+
+                            <script type="text/javascript">
+                                $(function(){
+                                    createPage(10, 13, 150);
+
+                                    function createPage(pageSize, buttons, total) {
+                                        $(".pagination").jBootstrapPage({
+                                            pageSize : pageSize,
+                                            total : total,
+                                            maxPageButton:buttons,
+                                            onPageClicked: function(obj, pageIndex) {
+                                                alert((pageIndex+1)+'页');
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
+                        </div>
                     </div>
                 </div>
 
