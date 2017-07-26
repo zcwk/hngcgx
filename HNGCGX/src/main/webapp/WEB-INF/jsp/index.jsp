@@ -63,7 +63,7 @@
 
     <%--分页--%>
     <link type="text/css" href="js/pagination/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
-    <script type="text/javascript" charset="utf-8" src="js/pagination/bootstrap-3.3.1/js/bootstrap.min.js"></script>
+    <%--<script type="text/javascript" charset="utf-8" src="js/pagination/bootstrap-3.3.1/js/bootstrap.min.js"></script>--%>
     <link type="text/css" href="js/pagination/bootstrap-pagination.min.css" rel="stylesheet"/>
     <script type="text/javascript" charset="utf-8" src="js/pagination/bootstrap-pagination.min.js"></script>
     <script type="text/javascript">
@@ -80,7 +80,7 @@
                     pageGroupSize: 5,
                     //当分页更改后引发此事件。
                     pageChanged: function (pageIndex, pageSize) {
-                        location.href = "/hngcgx/index/"+ pageIndex;
+                        location.href = "/hngcgx/index/" + pageIndex;
                     },
                 });
         });
@@ -106,6 +106,10 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">HNGCGX</a>
+
+            <a class="navbar-brand" href="#" style="right: auto">HNGCGX</a>
+
+
         </div>
         <!-- /.navbar-header -->
 
@@ -116,9 +120,14 @@
                     <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
+                    <c:choose>
+                        <c:when test="${URLEncoder.encode(cookie.UserName.value) != null }">
+                            <li>欢迎${URLEncoder.encode(cookie.UserName.value)}</li>
+                        </c:when>
+                    </c:choose>
                     <li><a
                             <c:choose>
-                                <c:when test="${user==null}">
+                                <c:when test="${cookie.UserPhone.value == null }">
                                     href="user/goLogin"
                                 </c:when>
                                 <c:otherwise>
@@ -131,9 +140,17 @@
                     </li>
                     <li class="divider"></li>
                     <li>
-                        <a href="user/goLogin"><i class="fa fa-sign-out fa-fw"></i>
+                        <c:choose>
+                            <c:when test="${cookie.UserPhone.value==null}">
+                            <a href="user/goLogin">
+                            </c:when>
+                            <c:otherwise>
+                                <a href="user/logout">
+                            </c:otherwise>
+                        </c:choose>
+                            <i class="fa fa-sign-out fa-fw"></i>
                             <c:choose>
-                                <c:when test="${user==null}">
+                                <c:when test="${cookie.UserPhone.value==null}">
                                     登录
                                 </c:when>
                                 <c:otherwise>
@@ -337,7 +354,7 @@
                                                 <div class="panel-heading">
                                                         ${project.projectTitle}
                                                 </div>
-                                                <div class="panel-body" >
+                                                <div class="panel-body">
                                                     <img src="${project.images}" style="width: 100%; height:100%"></img>
                                                 </div>
                                                 <div class="panel-footer">

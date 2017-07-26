@@ -3,7 +3,7 @@
 
 <mapper namespace="com.zdzyc.ssm.dao.ProjectMapper">
     <resultMap id="BaseResultMap" type="com.zdzyc.ssm.model.Project" >
-        <result column="id" property="id" jdbcType="BIGINT" />
+        <result column="project_id" property="id" jdbcType="BIGINT" />
         <result column="user_id" property="userId" jdbcType="BIGINT" />
         <result column="project_name" property="projectName" jdbcType="VARCHAR" />
         <result column="project_title" property="projectTitle" jdbcType="VARCHAR" />
@@ -18,7 +18,7 @@
     </resultMap>
 
     <sql id="Base_Column_List" >
-        id, user_id, project_name, project_title, project_detail, project_type, images, download_num,
+        project_id, user_id, project_name, project_title, project_detail, project_type, images, download_num,
         star,message_num,modify_time
     </sql>
     <select id="selectProjectByIndex" resultMap="BaseResultMap" >
@@ -26,5 +26,17 @@
         <include refid="Base_Column_List" />
         from tb_project
         where limit #{beginIndex,jdbcType=BIGINT}, #{endIndex,jdbcType=BIGINT}
+    </select>
+
+    <select id="selectDownloadProject" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from tb_project
+        order by download_num desc  limit 10
+    </select>
+    <select id="selectProject" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from tb_project
     </select>
 </mapper>

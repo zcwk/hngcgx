@@ -61,32 +61,25 @@ public class ProjectController {
         return ads;
     }
 
-    private List<Project> getDownLoadList(){
-        List<Project> download = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            Project project = new Project();
-            project.setProjectName("项目1" + i);
-            project.setProjectTitle("项目标题1" + i);
-            project.setProjectDetail("把爸爸啊安安妃娘娘士大夫撒飞洒发" + i);
-            download.add(project);
-        }
+    private List<Project> getDownLoadList() {
+        List<Project> download = projectService.selectDownloadProject(10);
 
         return download;
     }
 
     private ProjectPages getProject(int pageIndex) {
-        List<Project> list = new ArrayList<>();
-        for (int i = 0; i < 40; i++) {
-            Project project = new Project();
-            project.setProjectName("项目" + i);
-            project.setProjectTitle("项目标题" + i);
-            project.setProjectDetail("把爸爸啊安安妃娘娘士大夫撒飞洒发" + i);
-            project.setImages("http://pic25.nipic.com/20121121/668573_132500576118_2.jpg");
-            list.add(project);
-        }
-
         final int rows = 3;
         final int cols = 3;
+        List<Project> list = projectService.selectProject();
+
+        if (list == null) {
+            ProjectPages projectPages = new ProjectPages();
+            projectPages.setList(null);
+            projectPages.setPageIndex(pageIndex);
+            projectPages.setAllSize(list.size());
+            return projectPages;
+        }
+
         final boolean good = list.size() % cols == 0;
 
         final int size = good ? (list.size() / cols) : (list.size() / cols + 1);
@@ -115,7 +108,7 @@ public class ProjectController {
         List<List<Project>> requestList = new ArrayList<>();
 
         for (int i = 0; i < cols; i++) {
-            int index = (pageIndex * cols)+i;
+            int index = (pageIndex * cols) + i;
             if (index < allList.size())
                 requestList.add(allList.get(index));
         }

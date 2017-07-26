@@ -9,6 +9,10 @@ import java.util.List;
  */
 public interface IProjectService {
 
-    List<Project> selectProjectByIndex(Long beginIndex, Long endIndex);
+    List<Project> selectProject();
+
+    List<Project> selectDownloadProject(int size);
+
+    List<Project> selectProjectByIndex(int beginIndex, int endIndex);
 
 }

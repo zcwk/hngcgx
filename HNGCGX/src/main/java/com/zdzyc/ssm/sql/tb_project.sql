@@ -38,10 +38,10 @@ CREATE TABLE `tb_project` (
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
-INSERT INTO `tb_project` (user_id, project_name,project_title,project_type)
+INSERT INTO `tb_project` (user_id, project_name,project_title,project_type,download_num,images)
  VALUES
- (111, '大楼建设', '中国第一大楼',  1),
- (222, '大楼建设2', '中国第一大楼2', 2),
- (333, '大楼建设3', '中国第一大楼3', 3),
- (444, '大楼建设4', '中国第一大楼4',  4);
+ (4, '大楼建设423', '中国第一大楼423',  1,30,'http://pic25.nipic.com/20121121/668573_132500576118_2.jpg'),
+ (5, '大楼建设4232', '中国第一大楼4232', 2,50,'http://pic25.nipic.com/20121121/668573_132500576118_2.jpg'),
+ (6, '大楼建设4323', '中国第一大楼4233', 3,2,'http://pic25.nipic.com/20121121/668573_132500576118_2.jpg'),
+ (7, '大楼建设4234', '中国第一大楼4234',  4,10,'http://pic25.nipic.com/20121121/668573_132500576118_2.jpg');
 

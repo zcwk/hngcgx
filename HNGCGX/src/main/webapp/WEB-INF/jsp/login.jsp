@@ -70,7 +70,7 @@
                     <form role="form" action="user/doLogin">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" oninput="keywordfocus();" placeholder="用户名" name="userName"
+                                <input class="form-control" oninput="keywordfocus();" placeholder="电话号码" name="userPhone"
                                        type="text" autofocus>
                             </div>
                             <div class="form-group">

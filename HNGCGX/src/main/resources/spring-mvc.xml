@@ -13,6 +13,10 @@
     <!-- 静态资源处理 -->
     <mvc:default-servlet-handler/>
 
+    <mvc:interceptors>
+        <bean class="com.zdzyc.ssm.interceptor.LoginInterceptor" />
+    </mvc:interceptors>
+
     <!-- 校验器 -->
     <bean id="validator"
           class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">

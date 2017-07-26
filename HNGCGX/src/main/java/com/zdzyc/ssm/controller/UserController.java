@@ -18,7 +18,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
@@ -51,7 +56,7 @@ public class UserController {
     }
 
     @RequestMapping("/doLogin")
-    public String doLogin(@Validated @ModelAttribute("user") User user, BindingResult result, Model model) {
+    public String doLogin(@Validated @ModelAttribute("user") User user, BindingResult result, HttpServletResponse response, Model model) {
         //如果存在校验错误
         if (result.hasErrors()) {
             model.addAttribute("errors", Utils.changeUTF8(result));
@@ -66,11 +71,53 @@ public class UserController {
                 return "login";
             }
             model.addAttribute("user", m_user);
-            return "index";
+
+            try {
+                Cookie userNameCookie = new Cookie("UserName", URLEncoder.encode(m_user.getUserName(), "UTF-8"));
+                Cookie userPhoneCookie = new Cookie("UserPhone", URLEncoder.encode(m_user.getUserPhone(), "UTF-8"));
+                Cookie passwordCookie = new Cookie("UserPwd", URLEncoder.encode(m_user.getUserPwd(), "UTF-8"));
+                userNameCookie.setMaxAge(60 * 60);
+                userNameCookie.setPath("/");
+                userPhoneCookie.setMaxAge(60 * 60);
+                userPhoneCookie.setPath("/");
+                passwordCookie.setMaxAge(60 * 60);
+                passwordCookie.setPath("/");
+                response.addCookie(userNameCookie);
+                response.addCookie(userPhoneCookie);
+                response.addCookie(passwordCookie);
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            return "redirect:/index";
         } else {
             model.addAttribute("errors", "该用户尚未注册");
             return "login";
         }
+    }
+
+    @RequestMapping("/logout")
+    public String logout(HttpServletRequest request, HttpServletResponse response, Model model){
+        User loginUser = (User) request.getSession().getAttribute("loginUser");
+        try {
+            Cookie userNameCookie = new Cookie("UserName", URLEncoder.encode(loginUser.getUserName(), "UTF-8"));
+            Cookie userPhoneCookie = new Cookie("UserPhone", URLEncoder.encode(loginUser.getUserPhone(), "UTF-8"));
+            Cookie passwordCookie = new Cookie("UserPwd", URLEncoder.encode(loginUser.getUserPwd(), "UTF-8"));
+            userNameCookie.setMaxAge(0);
+            userNameCookie.setPath("/");
+            userPhoneCookie.setMaxAge(0);
+            userPhoneCookie.setPath("/");
+            passwordCookie.setMaxAge(0);
+            passwordCookie.setPath("/");
+            response.addCookie(userNameCookie);
+            response.addCookie(userPhoneCookie);
+            response.addCookie(passwordCookie);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        request.getSession().removeAttribute("loginUser");
+
+        return "redirect:/index";
     }
 
     @RequestMapping("/register")

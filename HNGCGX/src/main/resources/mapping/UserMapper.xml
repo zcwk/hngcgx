@@ -3,7 +3,7 @@
 
 <mapper namespace="com.zdzyc.ssm.dao.UserMapper">
     <resultMap id="BaseResultMap" type="com.zdzyc.ssm.model.User">
-        <result column="id" property="id" jdbcType="BIGINT"/>
+        <result column="user_id" property="id" jdbcType="BIGINT"/>
         <result column="user_name" property="userName" jdbcType="VARCHAR"/>
         <result column="user_phone" property="userPhone" jdbcType="VARCHAR"/>
         <result column="user_email" property="userEmail" jdbcType="VARCHAR"/>
@@ -11,31 +11,28 @@
         <result column="user_detail" property="userDetail" jdbcType="VARCHAR"/>
         <result column="user_face" property="userFace" jdbcType="VARCHAR"/>
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
-        <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP"/>
-        <result column="is_delete" property="isDelete" jdbcType="TINYINT"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        id, user_name, user_phone, user_email, user_pwd, user_detail,user_face, create_time, modify_time,
-        is_delete
+        user_id, user_name, user_phone, user_email, user_pwd, user_detail,user_face, create_time
     </sql>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
         select
         <include refid="Base_Column_List"/>
         from tb_user
-        where id = #{id,jdbcType=BIGINT}
+        where user_id = #{id,jdbcType=BIGINT}
     </select>
 
 
-    <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+    <select id="selectByUserPhone" resultMap="BaseResultMap" parameterType="java.lang.String">
         select
         <include refid="Base_Column_List"/>
         from tb_user
-        where user_name = #{userName,jdbcType=VARCHAR}
+        where user_phone = #{userPhone,jdbcType=VARCHAR}
     </select>
 
     <insert id="addUser" parameterType="com.zdzyc.ssm.model.User" useGeneratedKeys="true" keyProperty="id">
-        insert into tb_user(user_name,user_phone,user_email,user_pwd,user_detail,user_face,create_time)
-        values(#{userName},#{userPhone},#{userEmail},#{userPwd},#{userDetail},#{userFace},#{createTime})
+        insert into tb_user(user_phone,user_pwd)
+        values(#{userPhone},#{userPwd})
     </insert>
 </mapper>

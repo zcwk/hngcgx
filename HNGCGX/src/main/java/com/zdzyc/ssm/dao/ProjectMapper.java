@@ -9,6 +9,11 @@ import java.util.List;
  */
 public interface ProjectMapper {
 
-    List<Project> selectProjectByIndex(Long beginIndex, Long endIndex);
+    List<Project> selectProject();
+
+    List<Project> selectProjectByIndex(int beginIndex, int endIndex);
+
+
+    List<Project> selectDownloadProject(int size);
 
 }

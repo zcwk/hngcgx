@@ -18,7 +18,17 @@ public class ProjectServiceImpl implements IProjectService {
     public ProjectMapper projectMapper;
 
     @Override
-    public List<Project> selectProjectByIndex(Long beginIndex, Long endIndex) {
+    public List<Project> selectProject() {
+        return projectMapper.selectProject();
+    }
+
+    @Override
+    public List<Project> selectDownloadProject(int size) {
+        return projectMapper.selectDownloadProject(size);
+    }
+
+    @Override
+    public List<Project> selectProjectByIndex(int beginIndex, int endIndex) {
         return projectMapper.selectProjectByIndex(beginIndex, endIndex);
     }
 }
