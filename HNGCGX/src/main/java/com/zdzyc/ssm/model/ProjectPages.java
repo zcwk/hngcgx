@@ -7,6 +7,9 @@ import java.util.List;
  */
 public class ProjectPages {
 
+    private int allSize;
+    private int pageIndex;
+
     private List<List<Project>> list;
 
     public List<List<Project>> getList() {
@@ -15,5 +18,21 @@ public class ProjectPages {
 
     public void setList(List<List<Project>> list) {
         this.list = list;
+    }
+
+    public int getAllSize() {
+        return allSize;
+    }
+
+    public void setAllSize(int allSize) {
+        this.allSize = allSize;
+    }
+
+    public int getPageIndex() {
+        return pageIndex;
+    }
+
+    public void setPageIndex(int pageIndex) {
+        this.pageIndex = pageIndex;
     }
 }

@@ -61,10 +61,30 @@
     <!-- Custom Theme JavaScript -->
     <script src="dist/js/sb-admin-2.js"></script>
 
-    <script type="text/javascript" src="js/paginator/bootstrap-paginator.js"></script>
-    <script type="text/javascript" src="js/paginator/jBootsrapPage.js"></script>
-    <!-- Morris Charts CSS -->
-    <link href="js/paginator/jBootsrapPage.css" rel="stylesheet">
+    <%--分页--%>
+    <link type="text/css" href="js/pagination/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8" src="js/pagination/bootstrap-3.3.1/js/bootstrap.min.js"></script>
+    <link type="text/css" href="js/pagination/bootstrap-pagination.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8" src="js/pagination/bootstrap-pagination.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var demo3 = BootstrapPagination($(".demo3"),
+                {
+                    //记录总数。
+                    total: ${project.allSize},
+                    //分页尺寸。指示每页最多显示的记录数量。
+                    pageSize: 9,
+                    //当前页索引编号。从其开始（从0开始）的整数。
+                    pageIndex: ${project.pageIndex},
+                    //指示分页导航栏中最多显示的页索引数量。
+                    pageGroupSize: 5,
+                    //当分页更改后引发此事件。
+                    pageChanged: function (pageIndex, pageSize) {
+                        location.href = "/hngcgx/index/"+ pageIndex;
+                    },
+                });
+        });
+    </script>
     <style>
         .carousel-inner img {
             width: 100%;
@@ -317,8 +337,8 @@
                                                 <div class="panel-heading">
                                                         ${project.projectTitle}
                                                 </div>
-                                                <div class="panel-body">
-                                                    <img src="${project.images}"></img>
+                                                <div class="panel-body" >
+                                                    <img src="${project.images}" style="width: 100%; height:100%"></img>
                                                 </div>
                                                 <div class="panel-footer">
                                                         ${project.projectDetail}
@@ -332,24 +352,22 @@
                         <!-- /.panel-body -->
                         <div class="panel-footer">
                             <!-- 下面是控制分页控件，必须要是ul元素才行 -->
-                            <ul class="pagination"></ul>
-
-                            <script type="text/javascript">
-                                $(function(){
-                                    createPage(10, 13, 150);
-
-                                    function createPage(pageSize, buttons, total) {
-                                        $(".pagination").jBootstrapPage({
-                                            pageSize : pageSize,
-                                            total : total,
-                                            maxPageButton:buttons,
-                                            onPageClicked: function(obj, pageIndex) {
-                                                alert((pageIndex+1)+'页');
-                                            }
-                                        });
-                                    }
-                                });
-                            </script>
+                            <nav>
+                                <ul class="pagination demo3" data-total="101" data-pageindex="1" data-pagesize="20"
+                                    data-pagegroupsize="5"
+                                    data-leftformatestring="本页{count}条记录/共{total}条记录"
+                                    data-rightformatestring="第{pageNumber}页/共{totalPages}页"
+                                    data-pagenumberformatestring="{pageNumber}"
+                                    data-pagesizelistformatestring="每页显示{pageSize}条记录"
+                                    data-prevpagetext="上一页" data-nextpagetext="下一页"
+                                    data-prevgrouppagetext="" data-nextgrouppagetext=""
+                                    data-firstpagetext="首页" data-lastpagetext="尾页"
+                                    data-pageinput-placeholder="GO" data-pageinput-timeout="800"
+                                    data-pagesizelist="[5, 10, 20, 50, 100, 200]"
+                                    data-pagechanged='function (pageIndex, pageSize) {alert("page changed. pageIndex:" + pageIndex + ",pageSize:" + pageSize);};'
+                                    data-layoutscheme="lefttext,pagesizelist,firstpage,prevgrouppage,prevpage,pagenumber,nextpage,nextgrouppage,lastpage,pageinput,righttext">
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
