@@ -8,6 +8,7 @@
 %>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,11 +106,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">HNGCGX</a>
-
-            <a class="navbar-brand" href="#" style="right: auto">HNGCGX</a>
-
-
+            <a class="navbar-brand" href="#">海南工程资源共享</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -400,8 +397,11 @@
                                 <c:forEach var="download" items="${download}">
                                     <a href="#" class="list-group-item">
                                         <i class="fa fa-comment fa-fw"></i>${download.projectTitle}
-                                        <span class="pull-right text-muted small"><em>${download.createTime}</em>
-                            </span>
+                                        <span class="pull-right text-muted small">
+                                            <em>
+                                            <fmt:formatDate value="${download.createTime}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
+                                            </em>
+                                         </span>
                                     </a>
                                 </c:forEach>
                             </div>

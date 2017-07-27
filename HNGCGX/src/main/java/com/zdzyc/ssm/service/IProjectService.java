@@ -11,6 +11,10 @@ public interface IProjectService {
 
     List<Project> selectProject();
 
+    List<Project> selectAdProject();
+
+    List<Project> selectProjectByUserId(long userId);
+
     List<Project> selectDownloadProject(int size);
 
     List<Project> selectProjectByIndex(int beginIndex, int endIndex);

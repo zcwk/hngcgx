@@ -8,6 +8,8 @@
 %>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,40 +47,6 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script>
-        function setImagePreview() {
-            var docObj = document.getElementById("doc");
-            var imgObjPreview = document.getElementById("preview");
-            if (docObj.files && docObj.files[0]) {
-                //火狐下，直接设img属性
-                imgObjPreview.style.width = '100px';
-                imgObjPreview.style.height = '100px';
-                //imgObjPreview.src = docObj.files[0].getAsDataURL();
-                //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
-                imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
-            } else {
-                //IE下，使用滤镜
-                docObj.select();
-                var imgSrc = document.selection.createRange().text;
-                var localImagId = document.getElementById("localImag");
-                //必须设置初始大小
-                localImagId.style.width = "100px";
-                localImagId.style.height = "100px";
-                //图片异常的捕捉，防止用户修改后缀来伪造图片
-                try {
-                    localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
-                    localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
-                } catch (e) {
-                    alert("您上传的图片格式不正确，请重新选择!");
-                    return false;
-                }
-                imgObjPreview.style.display = 'none';
-                document.selection.empty();
-            }
-            return true;
-        }
-    </script>
-
 </head>
 
 <body>
@@ -101,32 +69,15 @@
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
-                    <li style="padding: 20px">
-                        <div style="width: 100%;text-align: center;margin: 0;">
-                            <form id="itemForm"
-                                  action="user/editFaceSubmit"
-                                  method="post" enctype="multipart/form-data">
-                                <input type="submit" name="pic" value="${item.pic }"/>
-                                <img id="preview" class="img-circle" src="${user.}"
-                                     style="width: 100px; height: 100px;">
-                                <input type=file name="doc" id="doc" onchange="javascript:setImagePreview();">
-
-                            </form>
-                        </div>
-
+                    <li>
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> 昵称：${user.userName}</a>
                     </li>
                     <li>
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> 昵称：</a>
-                    </li>
-                    <li>
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> 邮箱：</a>
-                    </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> 电话：</a>
+                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> 电话：${user.userPhone}</a>
                     </li>
                     <li>
                         <a href="forms.html"><i class="fa fa-edit fa-fw"></i>
-                            个性签名：共享资源。开放共享资源。开放共享资源。开放共享资源。开放共享资源。开放共享资源。开放</a>
+                            个性签名：${user.userDetail}</a>
                     </li>
                 </ul>
             </div>
@@ -161,18 +112,16 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr class="gradeC">
-                                <td>Misc</td>
-                                <td>PSP browser</td>
-                                <td>PSP</td>
-                                <td class="center">-</td>
-                            </tr>
-                            <tr class="gradeU">
-                                <td>Other browsers</td>
-                                <td>All others</td>
-                                <td>-</td>
-                                <td class="center">-</td>
-                            </tr>
+                            <c:forEach var="project" items="${project}">
+                                <tr class="gradeC">
+                                    <td>${project.projectTypeName}</td>
+                                    <td>${project.projectTitle}</td>
+                                    <td>
+                                        <fmt:formatDate value="${project.createTime}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
+                                    </td>
+                                    <td class="center">${project.downLoadNum}</td>
+                                </tr>
+                            </c:forEach>
                             </tbody>
                         </table>
 

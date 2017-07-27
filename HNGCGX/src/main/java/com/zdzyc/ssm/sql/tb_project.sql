@@ -32,6 +32,7 @@ CREATE TABLE `tb_project` (
   `message_num` bigint(11) default NULL COMMENT '评论数目',
   `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `modify_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '最后修改时间',
+  `is_ad` int NOT NULL DEFAULT 0 COMMENT '是否是推荐广告',
   PRIMARY KEY  (`project_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='项目表';
 

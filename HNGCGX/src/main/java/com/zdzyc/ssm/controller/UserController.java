@@ -1,10 +1,12 @@
 package com.zdzyc.ssm.controller;
 
 
+import com.zdzyc.ssm.model.Project;
 import com.zdzyc.ssm.model.User;
 import com.zdzyc.ssm.model.UserVo;
 import com.zdzyc.ssm.qcloud.QCloud;
 import com.zdzyc.ssm.qcloud.Result;
+import com.zdzyc.ssm.service.IProjectService;
 import com.zdzyc.ssm.service.IUserService;
 import com.zdzyc.ssm.utils.Utils;
 import org.springframework.stereotype.Controller;
@@ -26,6 +28,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 
@@ -35,11 +38,15 @@ public class UserController {
     @Resource
     private IUserService userService;
 
+    @Resource
+    private IProjectService projectService;
+
     @RequestMapping("/showUser")
     public String showUser(@RequestParam(value = "id") Long id, Model model) {
 
         User user = userService.selectByPrimaryKey(id);
         model.addAttribute("user", user);
+
         return "showUser";
     }
 
@@ -50,8 +57,12 @@ public class UserController {
     }
 
     @RequestMapping("/goUserHomePage")
-    public String goUserHomePage() {
+    public String goUserHomePage(HttpServletRequest request,Model model) {
+        User user = (User) request.getSession().getAttribute("loginUser");
+        model.addAttribute("user", user);
 
+        List<Project> list = projectService.selectProjectByUserId(user.getId());
+        model.addAttribute("project", list);
         return "userPage";
     }
 

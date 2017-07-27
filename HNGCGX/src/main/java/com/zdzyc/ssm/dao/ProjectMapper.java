@@ -11,8 +11,11 @@ public interface ProjectMapper {
 
     List<Project> selectProject();
 
-    List<Project> selectProjectByIndex(int beginIndex, int endIndex);
+    List<Project> selectAdProject();
 
+    List<Project> selectProjectByUserId(long userId);
+
+    List<Project> selectProjectByIndex(int beginIndex, int endIndex);
 
     List<Project> selectDownloadProject(int size);
 

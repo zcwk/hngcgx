@@ -23,6 +23,16 @@ public class ProjectServiceImpl implements IProjectService {
     }
 
     @Override
+    public List<Project> selectAdProject() {
+        return projectMapper.selectAdProject();
+    }
+
+    @Override
+    public List<Project> selectProjectByUserId(long userId) {
+        return projectMapper.selectProjectByUserId(userId);
+    }
+
+    @Override
     public List<Project> selectDownloadProject(int size) {
         return projectMapper.selectDownloadProject(size);
     }

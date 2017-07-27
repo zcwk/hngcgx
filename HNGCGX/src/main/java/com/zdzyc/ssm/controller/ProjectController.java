@@ -47,14 +47,12 @@ public class ProjectController {
 
     private List<AdEntity> getAdEntities() {
         List<AdEntity> ads = new ArrayList<>();
-        for (int i = 1; i < 6; i++) {
+        List<Project> adProject = projectService.selectAdProject();
+        for (int i = 0; i < adProject.size(); i++) {
+            Project project = adProject.get(i);
             AdEntity adEntity = new AdEntity();
-            adEntity.setIndex(i == 1 ? 0 : i);
-            adEntity.setImage("http://pic25.nipic.com/20121121/668573_132500576118_2.jpg");
-            Project project = new Project();
-            project.setProjectName("项目" + i);
-            project.setProjectTitle("项目标题" + i);
-            project.setProjectDetail("把爸爸啊安安妃娘娘士大夫撒飞洒发" + i);
+            adEntity.setIndex(i);
+            adEntity.setImage(project.getImages());
             adEntity.setProject(project);
             ads.add(adEntity);
         }

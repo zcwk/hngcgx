@@ -1,5 +1,7 @@
 package com.zdzyc.ssm.model;
 
+import com.zdzyc.ssm.consts.Constant;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -19,6 +21,8 @@ public class Project implements Serializable {
 
     private String projectDetail;// 项目介绍
 
+    private String projectTypeName;// 项目介绍
+
     private int projectType;// 类型
 
     private Integer downLoadNum;//下载次数
@@ -34,6 +38,14 @@ public class Project implements Serializable {
     private Date createTime;
 
     private Date modifyTime;
+
+    public String getProjectTypeName() {
+        return Constant.getProjectType(projectType);
+    }
+
+    public void setProjectTypeName(String projectTypeName) {
+        this.projectTypeName = projectTypeName;
+    }
 
     public Long getId() {
         return id;
