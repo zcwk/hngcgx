@@ -47,6 +47,16 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript">
+        function showImage() {
+            var r = new FileReader();
+            f = document.getElementById('image').files[0];
+            r.readAsDataURL(f);
+            r.onload = function (e) {
+                document.getElementById('show').src = this.result;
+            };
+        }
+    </script>
 </head>
 
 <body>
@@ -62,7 +72,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">个人主页</a>
+            <a class="navbar-brand" href="user/goUserHomePage">个人主页</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -97,33 +107,44 @@
 
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <form action="user/doLogin">
+                        <form action="user/doUpload" method="post" enctype="multipart/form-data">
                             <div class="form-group" style="margin-top: 10px">
                                 <label for="title">项目类型</label>
-                                <select class="form-control">
-                                    <c:forEach var="list" items="${typeList}">
-                                        <option>${list}</option>
+                                <select class="form-control" name="projectTypeName">
+                                    <c:forEach var="list" items="${typeList}" varStatus="index">
+                                        <option  <c:if
+                                                test='${project.projectTypeName.equals(list)}'> selected="true" </c:if>
+                                        >${list}</option>
                                     </c:forEach>
                                 </select>
                             </div>
 
                             <div class="form-group">
                                 <label for="title">项目标题</label>
-                                <input type="text" class="form-control" id="title" placeholder="项目标题" value="${project.projectTitle}">
+                                <input type="text" class="form-control" id="title" name="projectTitle"
+                                       placeholder="项目标题"
+                                       value="${project.projectTitle}">
                             </div>
                             <div class="form-group">
                                 <label for="detail">项目介绍</label>
-                                <textarea class="form-control" rows="3" id="detail" placeholder="介绍项目" value="${project.projectDetail}"></textarea>
+                                <textarea class="form-control" rows="3" id="detail" name="projectDetail"
+                                          placeholder="介绍项目"
+                                          value="${project.projectDetail}"></textarea>
                             </div>
+                            <c:if test="${project.images!=null}">
+                                <div class="form-group">
+                                    <img id="show" style="width: 100%;height: 300px" src="${project.images}">
+                                </div>
+                            </c:if>
                             <div class="form-group">
                                 <label for="image">选择照片</label>
-                                <input type="file" id="image">
+                                <input type="file" id="image" onchange="showImage()" name="updateImage">
                                 <p class="help-block">用于展示的照片.</p>
                             </div>
 
                             <div class="form-group">
                                 <label for="file">选择文件</label>
-                                <input type="file" id="file">
+                                <input type="file" id="file" name="updateFile">
                                 <p class="help-block">
                                     文件格式*.zip;*.rar;*.doc;*.xls;*.docx;*.ppt;*.pptx;*.txt;*.pdf;*.dwg'</p>
                             </div>

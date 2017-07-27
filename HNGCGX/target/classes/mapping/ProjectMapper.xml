@@ -15,6 +15,8 @@
         <result column="message_num" property="messageNum" jdbcType="BIGINT"/>
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
         <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP"/>
+        <result column="is_ad" property="isAd" jdbcType="BIGINT"/>
+        <result column="download_url" property="downloadUrl" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -68,7 +70,7 @@
     </delete>
 
     <insert id="insertProject" parameterType="com.zdzyc.ssm.model.Project">
-        insert into tb_project(user_id, project_name,project_title,project_detail,project_type,images)
-        values(#{userId}, #{projectName}, #{projectTitle}, #{projectDetail}, #{projectType}, #{images})
+        insert into tb_project(user_id, project_name,project_title,project_detail,project_type,images,download_url)
+        values(#{userId}, #{projectName}, #{projectTitle}, #{projectDetail}, #{projectType}, #{images}, #{downloadUrl})
     </insert>
 </mapper>

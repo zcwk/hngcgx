@@ -29,9 +29,13 @@ public class Project implements Serializable {
 
     private Integer star;//点赞数
 
+    private int isAd;//是否是推荐的广告
+
     private Integer messageNum;//留言数
 
     private String images;//图片地址
+
+    private String downloadUrl;//项目下载地址
 
     private List<String> listImage;//图片地址
 
@@ -45,6 +49,22 @@ public class Project implements Serializable {
 
     public void setProjectTypeName(String projectTypeName) {
         this.projectTypeName = projectTypeName;
+    }
+
+    public int getIsAd() {
+        return isAd;
+    }
+
+    public void setIsAd(int isAd) {
+        this.isAd = isAd;
+    }
+
+    public String getDownloadUrl() {
+        return downloadUrl;
+    }
+
+    public void setDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
     }
 
     public Long getId() {

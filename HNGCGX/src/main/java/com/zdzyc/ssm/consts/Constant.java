@@ -13,32 +13,19 @@ public class Constant {
     public final static int PT_MEDICAL = 6;
     public final static int PT_OTHER = 7;
 
+    private final static String ALLTYPE[] = {"办公建筑","商业酒店","住宅建筑","别墅建筑","景观小品","医疗建筑","其他",};
+
 
     public static String getProjectType(int type){
-        String name = "办公建筑";
-        switch (type){
-            case PT_WORK:
-                name = "办公建筑";
-                break;
-            case PT_HOTEL:
-                name = "商业酒店";
-                break;
-            case PT_HOME:
-                name = "住宅建筑";
-                break;
-            case PT_VILLA:
-                name = "别墅建筑";
-                break;
-            case PT_SCENERY:
-                name = "景观小品";
-                break;
-            case PT_MEDICAL:
-                name = "医疗建筑";
-                break;
-            case PT_OTHER:
-                name = "其他";
-                break;
+        return ALLTYPE[type];
+    }
+
+    public static int getProjectType(String name){
+        for (int i = 0; i < ALLTYPE.length; i++) {
+            if (ALLTYPE[i].equals(name)){
+                return i;
+            }
         }
-        return name;
+        return 0;
     }
 }

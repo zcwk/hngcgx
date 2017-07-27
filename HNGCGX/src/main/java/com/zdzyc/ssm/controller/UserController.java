@@ -10,6 +10,7 @@ import com.zdzyc.ssm.qcloud.QCloud;
 import com.zdzyc.ssm.qcloud.Result;
 import com.zdzyc.ssm.service.IProjectService;
 import com.zdzyc.ssm.service.IUserService;
+import com.zdzyc.ssm.utils.FileUpload;
 import com.zdzyc.ssm.utils.Utils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +25,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
@@ -76,11 +78,18 @@ public class UserController {
         }
         model.addAttribute("user", user);
 
+        List<String> typeList = new ArrayList<>();
+        for (int i = 0; i < Constant.PT_OTHER; i++) {
+            typeList.add(Constant.getProjectType(i));
+        }
+        model.addAttribute("typeList", typeList);
+
         Project project = projectService.selectProjectById(projectId);
         if (project != null)
             model.addAttribute("project", project);
         return "update";
     }
+
     @RequestMapping(value = "/delete/{projectId}", method = RequestMethod.GET)
     public String delete(@PathVariable("projectId") int projectId, HttpServletRequest request, Model model) {
 
@@ -90,21 +99,41 @@ public class UserController {
     }
 
     @RequestMapping("/doUpload")
-    public String doUpload(HttpServletRequest request, Model model) {
-
+    public String doUpload(@Validated @ModelAttribute("project") Project project, HttpServletRequest request, Model model, MultipartFile updateImage, MultipartFile updateFile) {
         User user = (User) request.getSession().getAttribute("loginUser");
-        model.addAttribute("user", user);
-
-
-        projectService.selectProjectByUserId(user.getId());
-
-        List<String> typeList = new ArrayList<>();
-        for (int i = 0; i < Constant.PT_OTHER; i++) {
-            typeList.add(Constant.getProjectType(i));
+        if (user == null) {
+            return "login";
         }
-        model.addAttribute("typeList", typeList);
 
-        return "userPage";
+        if (project != null) {
+            project.setUserId(user.getId());
+            project.setProjectType(Constant.getProjectType(project.getProjectTypeName()));
+            //原始名称
+            String originalFilename = updateImage.getOriginalFilename();
+            //上传图片
+            if (updateImage != null && originalFilename != null && originalFilename.length() > 0) {
+                try {
+                    String url = FileUpload.uploadFile(updateImage, request, "images/");
+                    project.setImages(url);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            //原始名称
+            String projectFilename = updateFile.getOriginalFilename();
+            //上传文件
+            if (updateFile != null && projectFilename != null && projectFilename.length() > 0) {
+                try {
+                    String path = FileUpload.uploadFile(updateFile, request, "project/");
+                    project.setDownloadUrl(path);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        projectService.insertProject(project);
+
+        return "redirect:/user/goUserHomePage";
     }
 
     @RequestMapping("/goUserHomePage")

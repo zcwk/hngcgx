@@ -47,6 +47,16 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript">
+        function showImage() {
+            var r = new FileReader();
+            f = document.getElementById('image').files[0];
+            r.readAsDataURL(f);
+            r.onload = function (e) {
+                document.getElementById('show').src = this.result;
+            };
+        }
+    </script>
 </head>
 
 <body>
@@ -62,7 +72,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">个人主页</a>
+            <a class="navbar-brand" href="user/goUserHomePage">个人主页</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -115,9 +125,14 @@
                                 <label for="detail">项目介绍</label>
                                 <textarea class="form-control" rows="3" id="detail"></textarea>
                             </div>
+                            <c:if test="${project.images!=null}">
+                                <div class="form-group">
+                                    <img id="show" style="width: 100%;height: 300px" src="${project.images}">
+                                </div>
+                            </c:if>
                             <div class="form-group">
                                 <label for="image">选择照片</label>
-                                <input type="file" id="image">
+                                <input type="file" id="image" onchange="showImage()">
                                 <p class="help-block">用于展示的照片.</p>
                             </div>
 

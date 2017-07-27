@@ -22,7 +22,6 @@ DROP TABLE IF EXISTS `tb_project`;
 CREATE TABLE `tb_project` (
   `project_id` bigint(11) NOT NULL AUTO_INCREMENT COMMENT '项目id',
   `user_id` bigint(11) NOT NULL COMMENT '上传项目的人id',
-  `project_name` varchar(255) NOT NULL COMMENT '项目名称',
   `project_title` varchar(255) NOT NULL COMMENT '项目title',
   `project_detail` varchar(1255) default NULL COMMENT '项目详细',
   `project_type` bigint(11) NOT NULL COMMENT '项目类型',
@@ -37,7 +36,10 @@ CREATE TABLE `tb_project` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='项目表';
 
 -- 修改表结构
--- alter table test add username char(20) not null default '';
+-- alter table tb_project add download_url char(200) not null default '';
+
+-- 去掉某列
+-- alter table tb_project drop column project_name ;
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
