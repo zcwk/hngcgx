@@ -54,6 +54,7 @@
             r.readAsDataURL(f);
             r.onload = function (e) {
                 document.getElementById('show').src = this.result;
+                document.getElementById('show').style.display = 'block';
             };
         }
     </script>
@@ -107,43 +108,47 @@
 
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <form action="user/doLogin">
-                            <div class="form-group" style="margin-top: 10px">
-                                <label for="title">项目类型</label>
-                                <select class="form-control">
-                                    <c:forEach var="list" items="${typeList}">
-                                        <option>${list}</option>
-                                    </c:forEach>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="title">项目标题</label>
-                                <input type="text" class="form-control" id="title" placeholder="项目标题">
-                            </div>
-                            <div class="form-group">
-                                <label for="detail">项目介绍</label>
-                                <textarea class="form-control" rows="3" id="detail"></textarea>
-                            </div>
-                            <c:if test="${project.images!=null}">
-                                <div class="form-group">
-                                    <img id="show" style="width: 100%;height: 300px" src="${project.images}">
+                        <div class="panel-body">
+                            <form action="user/doUpload" method="post" enctype="multipart/form-data">
+                                <div class="form-group" style="margin-top: 10px">
+                                    <label for="title">项目类型</label>
+                                    <select class="form-control" name="projectType">
+                                        <c:forEach var="list" items="${typeList}" varStatus="index">
+                                            <option>${list}</option>
+                                        </c:forEach>
+                                    </select>
                                 </div>
-                            </c:if>
-                            <div class="form-group">
-                                <label for="image">选择照片</label>
-                                <input type="file" id="image" onchange="showImage()">
-                                <p class="help-block">用于展示的照片.</p>
-                            </div>
 
-                            <div class="form-group">
-                                <label for="file">选择文件</label>
-                                <input type="file" id="file">
-                                <p class="help-block">
-                                    文件格式*.zip;*.rar;*.doc;*.xls;*.docx;*.ppt;*.pptx;*.txt;*.pdf;*.dwg'</p>
-                            </div>
-                            <button type="submit" class="btn btn-default">提交</button>
-                        </form>
+                                <div class="form-group">
+                                    <label for="title">项目标题</label>
+                                    <input type="text" class="form-control" id="title" name="projectTitle"
+                                           placeholder="项目标题"
+                                           value="${project.projectTitle}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="detail">项目介绍</label>
+                                    <textarea class="form-control" rows="3" id="detail" name="projectDetail"
+                                              placeholder="介绍项目"
+                                              value="${project.projectDetail}"></textarea>
+                                </div>
+                                <div class="form-group" >
+                                    <img id="show" style="width: 100%;height: 300px;display: none" src="${project.images}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="image">选择照片</label>
+                                    <input type="file" id="image" onchange="showImage()" name="updateImage">
+                                    <p class="help-block">用于展示的照片.</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="file">选择文件</label>
+                                    <input type="file" id="file" name="updateFile">
+                                    <p class="help-block">
+                                        文件格式*.zip;*.rar;*.doc;*.xls;*.docx;*.ppt;*.pptx;*.txt;*.pdf;*.dwg'</p>
+                                </div>
+                                <button type="submit" class="btn btn-default">提交修改</button>
+                            </form>
+                        </div>
                     </div>
                     <!-- /.panel-body -->
                 </div>

@@ -112,7 +112,7 @@ public class UserController {
             //上传图片
             if (updateImage != null && originalFilename != null && originalFilename.length() > 0) {
                 try {
-                    String url = FileUpload.uploadFile(updateImage, request, "images/");
+                    String url = FileUpload.uploadFile(updateImage, request, "images/", String.valueOf(project.getId()));
                     project.setImages(url);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -123,7 +123,7 @@ public class UserController {
             //上传文件
             if (updateFile != null && projectFilename != null && projectFilename.length() > 0) {
                 try {
-                    String path = FileUpload.uploadFile(updateFile, request, "project/");
+                    String path = FileUpload.uploadFile(updateFile, request, "project/", String.valueOf(project.getId()));
                     project.setDownloadUrl(path);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -131,6 +131,40 @@ public class UserController {
             }
         }
         projectService.insertProject(project);
+
+        return "redirect:/user/goUserHomePage";
+    }
+
+    @RequestMapping(value = "/doUpdate/{projectId}")
+    public String doUpdate(@PathVariable("projectId") int projectId, @Validated @ModelAttribute("project") Project project, HttpServletRequest request, Model model, MultipartFile updateImage, MultipartFile updateFile) {
+
+        Project pro = projectService.selectProjectById(projectId);
+
+        if (pro != null && project != null) {
+            //原始名称
+            String originalFilename = updateImage.getOriginalFilename();
+            //上传图片
+            if (originalFilename != null && originalFilename.length() > 0) {
+                try {
+                    String url = FileUpload.uploadFile(updateImage, request, "images/", String.valueOf(projectId));
+                    pro.setImages(url);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            //原始名称
+            String projectFilename = updateFile.getOriginalFilename();
+            //上传文件
+            if (projectFilename != null && projectFilename.length() > 0) {
+                try {
+                    String path = FileUpload.uploadFile(updateFile, request, "project/", String.valueOf(projectId));
+                    pro.setDownloadUrl(path);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        projectService.updateProject(pro);
 
         return "redirect:/user/goUserHomePage";
     }

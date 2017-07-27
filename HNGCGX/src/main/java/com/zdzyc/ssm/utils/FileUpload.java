@@ -13,17 +13,19 @@ import java.util.Date;
 public class FileUpload {
 
     //文件上传
-    public static String uploadFile(MultipartFile file, HttpServletRequest request, String paths) throws IOException {
+    public static String uploadFile(MultipartFile file, HttpServletRequest request, String paths,String id) throws IOException {
         String fileName = file.getOriginalFilename();
         String path = request.getSession().getServletContext().getRealPath(paths);
-        File tempFile = new File(path, new Date().getTime() + String.valueOf(fileName));
+        File tempFile = new File(path, id + String.valueOf(fileName));
         if (!tempFile.getParentFile().exists()) {
             tempFile.getParentFile().mkdir();
         }
         if (!tempFile.exists()) {
             tempFile.createNewFile();
+        }else{
+            tempFile.delete();
         }
         file.transferTo(tempFile);
-        return "images/" + tempFile.getName();
+        return paths + tempFile.getName();
     }
 }

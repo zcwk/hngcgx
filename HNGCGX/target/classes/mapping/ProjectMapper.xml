@@ -7,7 +7,6 @@
         <result column="user_id" property="userId" jdbcType="BIGINT"/>
         <result column="project_title" property="projectTitle" jdbcType="VARCHAR"/>
         <result column="project_detail" property="projectDetail" jdbcType="VARCHAR"/>
-        <result column="project_type" property="projectType" jdbcType="BIGINT"/>
         <result column="images" property="images" jdbcType="VARCHAR"/>
         <result column="download_num" property="downLoadNum" jdbcType="BIGINT"/>
         <result column="star" property="star" jdbcType="BIGINT"/>
@@ -15,12 +14,13 @@
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
         <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP"/>
         <result column="is_ad" property="isAd" jdbcType="BIGINT"/>
+        <result column="project_type" property="projectType" jdbcType="BIGINT"/>
         <result column="download_url" property="downloadUrl" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
         project_id, user_id, project_title, project_detail, project_type, images, download_num,create_time,
-        star,message_num,modify_time
+        star,message_num,modify_time,is_ad,download_url
     </sql>
     <select id="selectProjectByIndex" resultMap="BaseResultMap">
         select
@@ -72,4 +72,12 @@
         insert into tb_project(user_id,project_title,project_detail,project_type,images,download_url)
         values(#{userId}, #{projectTitle}, #{projectDetail}, #{projectType}, #{images}, #{downloadUrl})
     </insert>
+
+    <update id="updateProject" parameterType="com.zdzyc.ssm.model.Project">
+        UPDATE tb_project
+        SET
+        project_title=#{projectTitle},project_detail = #{projectDetail},project_type =#{projectType},images=#{images},download_url= #{downloadUrl}
+        WHERE project_id = #{id}
+    </update>
+
 </mapper>

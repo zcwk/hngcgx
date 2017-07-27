@@ -15,6 +15,8 @@ public interface IProjectService {
 
     int insertProject(Project project);
 
+    int updateProject(Project project);
+
     int deleteProject(int id);
 
     List<Project> selectAdProject();

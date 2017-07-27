@@ -107,7 +107,7 @@
 
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <form action="user/doUpload" method="post" enctype="multipart/form-data">
+                        <form action="user/doUpdate/${project.id}" method="post" enctype="multipart/form-data">
                             <div class="form-group" style="margin-top: 10px">
                                 <label for="title">项目类型</label>
                                 <select class="form-control" name="projectType">
@@ -128,8 +128,7 @@
                             <div class="form-group">
                                 <label for="detail">项目介绍</label>
                                 <textarea class="form-control" rows="3" id="detail" name="projectDetail"
-                                          placeholder="介绍项目"
-                                          value="${project.projectDetail}"></textarea>
+                                          placeholder="介绍项目">${project.projectDetail}</textarea>
                             </div>
                             <c:if test="${project.images!=null}">
                                 <div class="form-group">

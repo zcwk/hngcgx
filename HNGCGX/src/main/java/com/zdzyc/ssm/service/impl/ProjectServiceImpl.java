@@ -33,6 +33,11 @@ public class ProjectServiceImpl implements IProjectService {
     }
 
     @Override
+    public int updateProject(Project project) {
+        return projectMapper.updateProject(project);
+    }
+
+    @Override
     public int deleteProject(int id) {
         return projectMapper.deleteProject(id);
     }

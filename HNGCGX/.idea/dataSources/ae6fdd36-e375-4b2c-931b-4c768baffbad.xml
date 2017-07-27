@@ -36,40 +36,40 @@
       <DataType>varchar(1255)|0</DataType>
     </column>
     <column id="14" parent="9" name="project_type">
-      <Position>5</Position>
-      <Comment>项目类型</Comment>
-      <DataType>bigint(11)|0</DataType>
+      <Position>12</Position>
+      <DataType>char(200)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;办公建筑&apos;</DefaultExpression>
     </column>
     <column id="15" parent="9" name="images">
-      <Position>6</Position>
+      <Position>5</Position>
       <Comment>项目图片</Comment>
       <DataType>varchar(1255)|0</DataType>
     </column>
     <column id="16" parent="9" name="download_num">
-      <Position>7</Position>
+      <Position>6</Position>
       <Comment>下载次数</Comment>
       <DataType>bigint(11)|0</DataType>
     </column>
     <column id="17" parent="9" name="star">
-      <Position>8</Position>
+      <Position>7</Position>
       <Comment>点赞数目</Comment>
       <DataType>bigint(11)|0</DataType>
     </column>
     <column id="18" parent="9" name="message_num">
-      <Position>9</Position>
+      <Position>8</Position>
       <Comment>评论数目</Comment>
       <DataType>bigint(11)|0</DataType>
     </column>
     <column id="19" parent="9" name="create_time">
-      <Position>10</Position>
+      <Position>9</Position>
       <Comment>创建时间</Comment>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
     <column id="20" parent="9" name="modify_time">
-      <Position>11</Position>
+      <Position>10</Position>
       <Comment>最后修改时间</Comment>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
@@ -83,14 +83,14 @@
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="22" parent="9" name="is_ad">
-      <Position>12</Position>
+      <Position>11</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
     <column id="23" parent="9" name="download_url">
       <Position>13</Position>
-      <DataType>char(200)|0</DataType>
+      <DataType>varchar(200)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
