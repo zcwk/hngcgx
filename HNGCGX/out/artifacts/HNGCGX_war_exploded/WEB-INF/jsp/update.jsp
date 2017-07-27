@@ -102,7 +102,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default" style="margin-top: 20px">
                     <div class="panel-heading">
-                        上传资料
+                        修改资料
                     </div>
 
                     <!-- /.panel-heading -->
@@ -110,10 +110,10 @@
                         <form action="user/doUpload" method="post" enctype="multipart/form-data">
                             <div class="form-group" style="margin-top: 10px">
                                 <label for="title">项目类型</label>
-                                <select class="form-control" name="projectTypeName">
+                                <select class="form-control" name="projectType">
                                     <c:forEach var="list" items="${typeList}" varStatus="index">
                                         <option  <c:if
-                                                test='${project.projectTypeName.equals(list)}'> selected="true" </c:if>
+                                                test='${project.projectType.equals(list)}'> selected="true" </c:if>
                                         >${list}</option>
                                     </c:forEach>
                                 </select>

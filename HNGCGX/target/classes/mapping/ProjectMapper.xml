@@ -5,7 +5,6 @@
     <resultMap id="BaseResultMap" type="com.zdzyc.ssm.model.Project">
         <result column="project_id" property="id" jdbcType="BIGINT"/>
         <result column="user_id" property="userId" jdbcType="BIGINT"/>
-        <result column="project_name" property="projectName" jdbcType="VARCHAR"/>
         <result column="project_title" property="projectTitle" jdbcType="VARCHAR"/>
         <result column="project_detail" property="projectDetail" jdbcType="VARCHAR"/>
         <result column="project_type" property="projectType" jdbcType="BIGINT"/>
@@ -20,7 +19,7 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        project_id, user_id, project_name, project_title, project_detail, project_type, images, download_num,create_time,
+        project_id, user_id, project_title, project_detail, project_type, images, download_num,create_time,
         star,message_num,modify_time
     </sql>
     <select id="selectProjectByIndex" resultMap="BaseResultMap">
@@ -70,7 +69,7 @@
     </delete>
 
     <insert id="insertProject" parameterType="com.zdzyc.ssm.model.Project">
-        insert into tb_project(user_id, project_name,project_title,project_detail,project_type,images,download_url)
-        values(#{userId}, #{projectName}, #{projectTitle}, #{projectDetail}, #{projectType}, #{images}, #{downloadUrl})
+        insert into tb_project(user_id,project_title,project_detail,project_type,images,download_url)
+        values(#{userId}, #{projectTitle}, #{projectDetail}, #{projectType}, #{images}, #{downloadUrl})
     </insert>
 </mapper>

@@ -61,8 +61,8 @@ public class UserController {
 
 
         List<String> typeList = new ArrayList<>();
-        for (int i = 0; i < Constant.PT_OTHER; i++) {
-            typeList.add(Constant.getProjectType(i));
+        for (int i = 0; i < Constant.ALLTYPE.length; i++) {
+            typeList.add(Constant.ALLTYPE[i]);
         }
         model.addAttribute("typeList", typeList);
 
@@ -79,8 +79,8 @@ public class UserController {
         model.addAttribute("user", user);
 
         List<String> typeList = new ArrayList<>();
-        for (int i = 0; i < Constant.PT_OTHER; i++) {
-            typeList.add(Constant.getProjectType(i));
+        for (int i = 0; i < Constant.ALLTYPE.length; i++) {
+            typeList.add(Constant.ALLTYPE[i]);
         }
         model.addAttribute("typeList", typeList);
 
@@ -107,7 +107,6 @@ public class UserController {
 
         if (project != null) {
             project.setUserId(user.getId());
-            project.setProjectType(Constant.getProjectType(project.getProjectTypeName()));
             //原始名称
             String originalFilename = updateImage.getOriginalFilename();
             //上传图片

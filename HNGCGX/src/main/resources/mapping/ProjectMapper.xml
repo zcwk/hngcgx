@@ -70,6 +70,6 @@
 
     <insert id="insertProject" parameterType="com.zdzyc.ssm.model.Project">
         insert into tb_project(user_id,project_title,project_detail,project_type,images,download_url)
-        values(#{userId}, #{projectName}, #{projectTitle}, #{projectDetail}, #{projectType}, #{images}, #{downloadUrl})
+        values(#{userId}, #{projectTitle}, #{projectDetail}, #{projectType}, #{images}, #{downloadUrl})
     </insert>
 </mapper>

@@ -115,7 +115,7 @@
                             <tbody>
                             <c:forEach var="project" items="${project}">
                                 <tr class="gradeC" onclick="javascript:window.location.href='user/update/${project.id}'">
-                                    <td>${project.projectTypeName}</td>
+                                    <td>${project.projectType}</td>
                                     <td>${project.projectTitle}</td>
                                     <td>
                                         <fmt:formatDate value="${project.createTime}"

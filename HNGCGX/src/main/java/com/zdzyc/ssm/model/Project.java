@@ -21,9 +21,7 @@ public class Project implements Serializable {
 
     private String projectDetail;// 项目介绍
 
-    private String projectTypeName;// 项目介绍
-
-    private int projectType;// 类型
+    private String projectType;// 类型
 
     private Integer downLoadNum;//下载次数
 
@@ -42,30 +40,6 @@ public class Project implements Serializable {
     private Date createTime;
 
     private Date modifyTime;
-
-    public String getProjectTypeName() {
-        return Constant.getProjectType(projectType);
-    }
-
-    public void setProjectTypeName(String projectTypeName) {
-        this.projectTypeName = projectTypeName;
-    }
-
-    public int getIsAd() {
-        return isAd;
-    }
-
-    public void setIsAd(int isAd) {
-        this.isAd = isAd;
-    }
-
-    public String getDownloadUrl() {
-        return downloadUrl;
-    }
-
-    public void setDownloadUrl(String downloadUrl) {
-        this.downloadUrl = downloadUrl;
-    }
 
     public Long getId() {
         return id;
@@ -107,11 +81,11 @@ public class Project implements Serializable {
         this.projectDetail = projectDetail;
     }
 
-    public int getProjectType() {
+    public String getProjectType() {
         return projectType;
     }
 
-    public void setProjectType(int projectType) {
+    public void setProjectType(String projectType) {
         this.projectType = projectType;
     }
 
@@ -131,6 +105,14 @@ public class Project implements Serializable {
         this.star = star;
     }
 
+    public int getIsAd() {
+        return isAd;
+    }
+
+    public void setIsAd(int isAd) {
+        this.isAd = isAd;
+    }
+
     public Integer getMessageNum() {
         return messageNum;
     }
@@ -145,6 +127,14 @@ public class Project implements Serializable {
 
     public void setImages(String images) {
         this.images = images;
+    }
+
+    public String getDownloadUrl() {
+        return downloadUrl;
+    }
+
+    public void setDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
     }
 
     public List<String> getListImage() {
@@ -179,11 +169,13 @@ public class Project implements Serializable {
                 ", projectName='" + projectName + '\'' +
                 ", projectTitle='" + projectTitle + '\'' +
                 ", projectDetail='" + projectDetail + '\'' +
-                ", projectType=" + projectType +
+                ", projectType='" + projectType + '\'' +
                 ", downLoadNum=" + downLoadNum +
                 ", star=" + star +
+                ", isAd=" + isAd +
                 ", messageNum=" + messageNum +
                 ", images='" + images + '\'' +
+                ", downloadUrl='" + downloadUrl + '\'' +
                 ", listImage=" + listImage +
                 ", createTime=" + createTime +
                 ", modifyTime=" + modifyTime +
