@@ -48,12 +48,24 @@
         where user_id = #{userId}
     </select>
 
+    <select id="selectProjectById" resultMap="BaseResultMap" parameterType="int">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_project
+        where project_id = #{id}
+    </select>
+
     <select id="selectAdProject" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
         from tb_project
         where is_ad = 1
     </select>
+
+    <delete id="deleteProject" parameterType="int">
+        DELETE FROM tb_project
+        WHERE project_id = #{id}
+    </delete>
 
     <insert id="insertProject" parameterType="com.zdzyc.ssm.model.Project">
         insert into tb_project(user_id, project_name,project_title,project_detail,project_type,images)

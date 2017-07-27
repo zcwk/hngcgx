@@ -92,42 +92,43 @@
             <div class="col-lg-12">
                 <div class="panel panel-default" style="margin-top: 20px">
                     <div class="panel-heading">
-
-                        <a href="user/upload">
-                            上传资料
-                        </a>
-
+                        上传资料
                     </div>
 
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <table width="100%" class="table table-striped table-bordered table-hover"
-                               id="dataTables-example">
-                            <thead>
-                            <tr>
-                                <th>类型</th>
-                                <th>标题</th>
-                                <th>创建日期</th>
-                                <th>下载次数</th>
-                                <th>删除</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach var="project" items="${project}">
-                                <tr class="gradeC" onclick="javascript:window.location.href='user/update/${project.id}'">
-                                    <td>${project.projectTypeName}</td>
-                                    <td>${project.projectTitle}</td>
-                                    <td>
-                                        <fmt:formatDate value="${project.createTime}"
-                                                        pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
-                                    </td>
-                                    <td class="center">${project.downLoadNum}</td>
-                                    <th><a href="user/delete/${project.id}">删除</a></th>
-                                </tr>
-                            </c:forEach>
-                            </tbody>
-                        </table>
+                        <form action="user/doLogin">
+                            <div class="form-group" style="margin-top: 10px">
+                                <label for="title">项目类型</label>
+                                <select class="form-control">
+                                    <c:forEach var="list" items="${typeList}">
+                                        <option>${list}</option>
+                                    </c:forEach>
+                                </select>
+                            </div>
 
+                            <div class="form-group">
+                                <label for="title">项目标题</label>
+                                <input type="text" class="form-control" id="title" placeholder="项目标题" value="${project.projectTitle}">
+                            </div>
+                            <div class="form-group">
+                                <label for="detail">项目介绍</label>
+                                <textarea class="form-control" rows="3" id="detail" placeholder="介绍项目" value="${project.projectDetail}"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="image">选择照片</label>
+                                <input type="file" id="image">
+                                <p class="help-block">用于展示的照片.</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="file">选择文件</label>
+                                <input type="file" id="file">
+                                <p class="help-block">
+                                    文件格式*.zip;*.rar;*.doc;*.xls;*.docx;*.ppt;*.pptx;*.txt;*.pdf;*.dwg'</p>
+                            </div>
+                            <button type="submit" class="btn btn-default">提交修改</button>
+                        </form>
                     </div>
                     <!-- /.panel-body -->
                 </div>

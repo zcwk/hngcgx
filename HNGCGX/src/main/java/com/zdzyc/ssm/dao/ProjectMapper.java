@@ -11,6 +11,8 @@ public interface ProjectMapper {
 
     int insertProject(Project project);
 
+    Project selectProjectById(int id);
+
     List<Project> selectProject();
 
     List<Project> selectAdProject();
@@ -21,4 +23,5 @@ public interface ProjectMapper {
 
     List<Project> selectDownloadProject(int size);
 
+    int deleteProject(int id);
 }

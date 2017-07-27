@@ -11,7 +11,11 @@ public interface IProjectService {
 
     List<Project> selectProject();
 
+    Project selectProjectById(int id);
+
     int insertProject(Project project);
+
+    int deleteProject(int id);
 
     List<Project> selectAdProject();
 

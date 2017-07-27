@@ -16,9 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
@@ -44,15 +42,6 @@ public class UserController {
     @Resource
     private IProjectService projectService;
 
-    @RequestMapping("/showUser")
-    public String showUser(@RequestParam(value = "id") Long id, Model model) {
-
-        User user = userService.selectByPrimaryKey(id);
-        model.addAttribute("user", user);
-
-        return "showUser";
-    }
-
     @RequestMapping("/goLogin")
     public String goLogin() {
 
@@ -63,6 +52,9 @@ public class UserController {
     public String goUpload(HttpServletRequest request, Model model) {
 
         User user = (User) request.getSession().getAttribute("loginUser");
+        if (user == null) {
+            return "login";
+        }
         model.addAttribute("user", user);
 
 
@@ -73,6 +65,28 @@ public class UserController {
         model.addAttribute("typeList", typeList);
 
         return "upLoad";
+    }
+
+    @RequestMapping(value = "/update/{projectId}", method = RequestMethod.GET)
+    public String update(@PathVariable("projectId") int projectId, HttpServletRequest request, Model model) {
+
+        User user = (User) request.getSession().getAttribute("loginUser");
+        if (user == null) {
+            return "login";
+        }
+        model.addAttribute("user", user);
+
+        Project project = projectService.selectProjectById(projectId);
+        if (project != null)
+            model.addAttribute("project", project);
+        return "update";
+    }
+    @RequestMapping(value = "/delete/{projectId}", method = RequestMethod.GET)
+    public String delete(@PathVariable("projectId") int projectId, HttpServletRequest request, Model model) {
+
+        int ok = projectService.deleteProject(projectId);
+
+        return "redirect:/user/goUserHomePage";
     }
 
     @RequestMapping("/doUpload")
@@ -90,7 +104,7 @@ public class UserController {
         }
         model.addAttribute("typeList", typeList);
 
-        return "showUser";
+        return "userPage";
     }
 
     @RequestMapping("/goUserHomePage")
