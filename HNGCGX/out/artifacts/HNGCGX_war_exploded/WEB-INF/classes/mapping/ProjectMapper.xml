@@ -55,4 +55,8 @@
         where is_ad = 1
     </select>
 
+    <insert id="insertProject" parameterType="com.zdzyc.ssm.model.Project">
+        insert into tb_project(user_id, project_name,project_title,project_detail,project_type,images)
+        values(#{userId}, #{projectName}, #{projectTitle}, #{projectDetail}, #{projectType}, #{images})
+    </insert>
 </mapper>

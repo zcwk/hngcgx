@@ -1,6 +1,8 @@
 package com.zdzyc.ssm.controller;
 
 
+import com.zdzyc.ssm.consts.Constant;
+import com.zdzyc.ssm.dao.UserMapper;
 import com.zdzyc.ssm.model.Project;
 import com.zdzyc.ssm.model.User;
 import com.zdzyc.ssm.model.UserVo;
@@ -27,6 +29,7 @@ import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -56,9 +59,47 @@ public class UserController {
         return "login";
     }
 
-    @RequestMapping("/goUserHomePage")
-    public String goUserHomePage(HttpServletRequest request,Model model) {
+    @RequestMapping("/upload")
+    public String goUpload(HttpServletRequest request, Model model) {
+
         User user = (User) request.getSession().getAttribute("loginUser");
+        model.addAttribute("user", user);
+
+
+        List<String> typeList = new ArrayList<>();
+        for (int i = 0; i < Constant.PT_OTHER; i++) {
+            typeList.add(Constant.getProjectType(i));
+        }
+        model.addAttribute("typeList", typeList);
+
+        return "upLoad";
+    }
+
+    @RequestMapping("/doUpload")
+    public String doUpload(HttpServletRequest request, Model model) {
+
+        User user = (User) request.getSession().getAttribute("loginUser");
+        model.addAttribute("user", user);
+
+
+        projectService.selectProjectByUserId(user.getId());
+
+        List<String> typeList = new ArrayList<>();
+        for (int i = 0; i < Constant.PT_OTHER; i++) {
+            typeList.add(Constant.getProjectType(i));
+        }
+        model.addAttribute("typeList", typeList);
+
+        return "showUser";
+    }
+
+    @RequestMapping("/goUserHomePage")
+    public String goUserHomePage(HttpServletRequest request, Model model) {
+        User user = (User) request.getSession().getAttribute("loginUser");
+
+        if (user == null) {
+            return "login";
+        }
         model.addAttribute("user", user);
 
         List<Project> list = projectService.selectProjectByUserId(user.getId());
@@ -87,11 +128,11 @@ public class UserController {
                 Cookie userNameCookie = new Cookie("UserName", URLEncoder.encode(m_user.getUserName(), "UTF-8"));
                 Cookie userPhoneCookie = new Cookie("UserPhone", URLEncoder.encode(m_user.getUserPhone(), "UTF-8"));
                 Cookie passwordCookie = new Cookie("UserPwd", URLEncoder.encode(m_user.getUserPwd(), "UTF-8"));
-                userNameCookie.setMaxAge(60 * 60);
+                userNameCookie.setMaxAge(60 * 60 * 24);
                 userNameCookie.setPath("/");
-                userPhoneCookie.setMaxAge(60 * 60);
+                userPhoneCookie.setMaxAge(60 * 60 * 24);
                 userPhoneCookie.setPath("/");
-                passwordCookie.setMaxAge(60 * 60);
+                passwordCookie.setMaxAge(60 * 60 * 24);
                 passwordCookie.setPath("/");
                 response.addCookie(userNameCookie);
                 response.addCookie(userPhoneCookie);
@@ -107,7 +148,7 @@ public class UserController {
     }
 
     @RequestMapping("/logout")
-    public String logout(HttpServletRequest request, HttpServletResponse response, Model model){
+    public String logout(HttpServletRequest request, HttpServletResponse response, Model model) {
         User loginUser = (User) request.getSession().getAttribute("loginUser");
         try {
             Cookie userNameCookie = new Cookie("UserName", URLEncoder.encode(loginUser.getUserName(), "UTF-8"));

@@ -23,6 +23,11 @@ public class ProjectServiceImpl implements IProjectService {
     }
 
     @Override
+    public int insertProject(Project project) {
+        return projectMapper.insertProject(project);
+    }
+
+    @Override
     public List<Project> selectAdProject() {
         return projectMapper.selectAdProject();
     }

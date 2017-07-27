@@ -36,6 +36,8 @@ CREATE TABLE `tb_project` (
   PRIMARY KEY  (`project_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='项目表';
 
+-- 修改表结构
+-- alter table test add username char(20) not null default '';
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------

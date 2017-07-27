@@ -9,6 +9,8 @@ import java.util.List;
  */
 public interface ProjectMapper {
 
+    int insertProject(Project project);
+
     List<Project> selectProject();
 
     List<Project> selectAdProject();

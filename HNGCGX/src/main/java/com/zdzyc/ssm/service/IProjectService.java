@@ -11,6 +11,8 @@ public interface IProjectService {
 
     List<Project> selectProject();
 
+    int insertProject(Project project);
+
     List<Project> selectAdProject();
 
     List<Project> selectProjectByUserId(long userId);
