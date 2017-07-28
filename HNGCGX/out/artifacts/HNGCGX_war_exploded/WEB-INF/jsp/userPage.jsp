@@ -46,7 +46,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
@@ -109,6 +108,7 @@
                                 <th>标题</th>
                                 <th>创建日期</th>
                                 <th>下载次数</th>
+                                <th>下载</th>
                                 <th>删除</th>
                             </tr>
                             </thead>
@@ -122,6 +122,7 @@
                                                         pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
                                     </td>
                                     <td class="center">${project.downLoadNum}</td>
+                                    <th><a href="user/download/${project.id}">下载</a></th>
                                     <th><a href="user/delete/${project.id}">删除</a></th>
                                 </tr>
                             </c:forEach>

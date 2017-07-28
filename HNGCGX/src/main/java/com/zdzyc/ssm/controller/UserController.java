@@ -12,6 +12,9 @@ import com.zdzyc.ssm.service.IProjectService;
 import com.zdzyc.ssm.service.IUserService;
 import com.zdzyc.ssm.utils.FileUpload;
 import com.zdzyc.ssm.utils.Utils;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -24,9 +27,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -64,6 +65,7 @@ public class UserController {
         for (int i = 0; i < Constant.ALLTYPE.length; i++) {
             typeList.add(Constant.ALLTYPE[i]);
         }
+
         model.addAttribute("typeList", typeList);
 
         return "upLoad";
@@ -105,6 +107,15 @@ public class UserController {
             return "login";
         }
 
+        if (StringUtils.isEmpty(project.getProjectTitle())) {
+            model.addAttribute("project", project);
+            return "redirect:/user/upload";
+        }
+        if (StringUtils.isEmpty(project.getProjectDetail())) {
+            model.addAttribute("project", project);
+            return "redirect:/user/upload";
+        }
+
         if (project != null) {
             project.setUserId(user.getId());
             //原始名称
@@ -117,6 +128,8 @@ public class UserController {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            } else {
+                return "redirect:/user/upload";
             }
             //原始名称
             String projectFilename = updateFile.getOriginalFilename();
@@ -128,6 +141,8 @@ public class UserController {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            } else {
+                return "redirect:/user/upload";
             }
         }
         projectService.insertProject(project);
@@ -286,32 +301,21 @@ public class UserController {
         }
     }
 
+    @RequestMapping(value = "/download/{projectId}")
+    public ResponseEntity<byte[]> download(@PathVariable("projectId") int projectId, HttpServletRequest request) throws IOException {
 
-    //修改头像
-    @RequestMapping("/editFaceSubmit")
-    public String editItemSubmit(MultipartFile pictureFile) throws Exception {
-
-        //原始文件名称
-        String pictureFile_name = pictureFile.getOriginalFilename();
-        //新文件名称
-        String newFileName = UUID.randomUUID().toString() + pictureFile_name.substring(pictureFile_name.lastIndexOf("."));
-
-        //上传图片
-        File uploadPic = new File("F:/develop/upload/temp/" + newFileName);
-
-        if (!uploadPic.exists()) {
-            uploadPic.mkdirs();
-        }
-        //向磁盘写文件
-        pictureFile.transferTo(uploadPic);
-
-        Result result = QCloud.getIstance().uploadFile("11", "", "");
-        if (result.getCode() == 0) {
-
-        }
-
-        return "userPage";
-
+        Project project = projectService.selectProjectById(projectId);
+        String path = request.getServletContext().getRealPath("");//获取项目动态绝对路径
+        File file = new File(path + "/" + project.getDownloadUrl());
+        byte[] body = null;
+        InputStream is = new FileInputStream(file);
+        body = new byte[is.available()];
+        is.read(body);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Disposition", "attchement;filename=" + new String(file.getName().getBytes("utf-8"),"iso-8859-1"));
+        HttpStatus statusCode = HttpStatus.OK;
+        ResponseEntity<byte[]> entity = new ResponseEntity<byte[]>(body, headers, statusCode);
+        return entity;
     }
 
 }

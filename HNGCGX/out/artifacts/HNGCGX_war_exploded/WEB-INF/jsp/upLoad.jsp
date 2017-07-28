@@ -114,7 +114,9 @@
                                     <label for="title">项目类型</label>
                                     <select class="form-control" name="projectType">
                                         <c:forEach var="list" items="${typeList}" varStatus="index">
-                                            <option>${list}</option>
+                                            <option
+                                                    <c:if test='${project.projectType.equals(list)}'> selected="true" </c:if>
+                                            >${list}</option>
                                         </c:forEach>
                                     </select>
                                 </div>
@@ -129,10 +131,11 @@
                                     <label for="detail">项目介绍</label>
                                     <textarea class="form-control" rows="3" id="detail" name="projectDetail"
                                               placeholder="介绍项目"
-                                              value="${project.projectDetail}"></textarea>
+                                    >${project.projectDetail}</textarea>
                                 </div>
-                                <div class="form-group" >
-                                    <img id="show" style="width: 100%;height: 300px;display: none" src="${project.images}">
+                                <div class="form-group">
+                                    <img id="show" style="width: 100%;height: 300px;display: none"
+                                         src="${project.images}">
                                 </div>
                                 <div class="form-group">
                                     <label for="image">选择照片</label>
@@ -146,7 +149,7 @@
                                     <p class="help-block">
                                         文件格式*.zip;*.rar;*.doc;*.xls;*.docx;*.ppt;*.pptx;*.txt;*.pdf;*.dwg'</p>
                                 </div>
-                                <button type="submit" class="btn btn-default">提交修改</button>
+                                <button type="submit" class="btn btn-default">提交</button>
                             </form>
                         </div>
                     </div>
