@@ -79,6 +79,9 @@
                     pageIndex: ${project.pageIndex},
                     //指示分页导航栏中最多显示的页索引数量。
                     pageGroupSize: 5,
+                    //布局方案。指示按照什么样的排列顺序显示哪些元素。
+                    layoutScheme: "lefttext,firstpage,prevgrouppage,prevpage,pagenumber,nextpage,nextgrouppage,lastpage,pageinput,righttext",
+
                     //当分页更改后引发此事件。
                     pageChanged: function (pageIndex, pageSize) {
                         location.href = "/hngcgx/index/" + pageIndex;
@@ -352,7 +355,7 @@
                                                         ${project.projectTitle}
                                                 </div>
                                                 <div class="panel-body">
-                                                    <img src="${project.images}" style="width: 100%; height:100%"></img>
+                                                    <img src="${project.images}" style="width: 100%; height:200px"></img>
                                                 </div>
                                                 <div class="panel-footer">
                                                         ${project.projectDetail}
