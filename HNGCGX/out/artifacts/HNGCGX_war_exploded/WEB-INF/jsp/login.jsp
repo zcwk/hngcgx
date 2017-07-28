@@ -44,7 +44,9 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
     <script language="javascript">
+
         function keywordfocus() {
             document.getElementById('error-show').style.display = 'none';
         }
@@ -70,7 +72,7 @@
                     <form role="form" action="user/doLogin">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" oninput="keywordfocus();" placeholder="电话号码" name="userPhone"
+                                <input id="userPhone" class="form-control" placeholder="电话号码" oninput="keywordfocus();" name="userPhone"
                                        type="text" autofocus>
                             </div>
                             <div class="form-group">
@@ -85,7 +87,7 @@
                                 <a href="user/register" style="float: right">新用户注册</a>
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
-                            <input type="submit" class="btn btn-lg btn-success btn-block" value="登录"></input>
+                            <input type="submit" class="btn btn-lg btn-success btn-block" value="登录" ></input>
 
                         </fieldset>
                     </form>

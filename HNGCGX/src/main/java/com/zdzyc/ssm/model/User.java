@@ -13,7 +13,6 @@ import java.util.Date;
 public class User implements Serializable {
     private Long id;
 
-
     private String userName;
 
     @NotEmpty(message = "{login.phone.is.null}")

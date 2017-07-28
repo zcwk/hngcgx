@@ -6,9 +6,7 @@
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
 %>
-
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@include file="common/tag.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -109,7 +107,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">海南工程资源共享</a>
+            <a class="navbar-brand" href="#">海南工程资源共享平台</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -141,23 +139,23 @@
                     <li class="divider"></li>
                     <li>
                         <c:choose>
-                            <c:when test="${cookie.UserPhone.value==null}">
-                            <a href="user/goLogin">
+                        <c:when test="${cookie.UserPhone.value==null}">
+                        <a href="user/goLogin">
                             </c:when>
                             <c:otherwise>
-                                <a href="user/logout">
-                            </c:otherwise>
-                        </c:choose>
-                            <i class="fa fa-sign-out fa-fw"></i>
-                            <c:choose>
-                                <c:when test="${cookie.UserPhone.value==null}">
-                                    登录
-                                </c:when>
-                                <c:otherwise>
-                                    注销
+                            <a href="user/logout">
                                 </c:otherwise>
-                            </c:choose>
-                        </a>
+                                </c:choose>
+                                <i class="fa fa-sign-out fa-fw"></i>
+                                <c:choose>
+                                    <c:when test="${cookie.UserPhone.value==null}">
+                                        登录
+                                    </c:when>
+                                    <c:otherwise>
+                                        注销
+                                    </c:otherwise>
+                                </c:choose>
+                            </a>
                     </li>
                 </ul>
                 <!-- /.dropdown-user -->
@@ -349,19 +347,22 @@
                             <c:forEach var="projectAll" items="${project.list}">
                                 <div class="row">
                                     <c:forEach var="project" items="${projectAll}">
-                                        <div class="col-lg-4">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                        ${project.projectTitle}
-                                                </div>
-                                                <div class="panel-body">
-                                                    <img src="${project.images}" style="width: 100%; height:200px"></img>
-                                                </div>
-                                                <div class="panel-footer">
-                                                        ${project.projectDetail}
+                                        <a href="index/projectDetails/${project.id}">
+                                            <div class="col-lg-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                            ${project.projectTitle}
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <img src="${project.images}"
+                                                             style="width: 100%; height:200px"></img>
+                                                    </div>
+                                                    <div class="panel-footer">
+                                                            ${project.projectDetail}
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </c:forEach>
                                 </div>
                             </c:forEach>
@@ -398,11 +399,12 @@
                         <div class="panel-body">
                             <div class="list-group">
                                 <c:forEach var="download" items="${download}">
-                                    <a href="#" class="list-group-item">
+                                    <a href="index/projectDetails/${download.id}" class="list-group-item">
                                         <i class="fa fa-comment fa-fw"></i>${download.projectTitle}
                                         <span class="pull-right text-muted small">
                                             <em>
-                                            <fmt:formatDate value="${download.createTime}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
+                                            <fmt:formatDate value="${download.createTime}"
+                                                            pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
                                             </em>
                                          </span>
                                     </a>

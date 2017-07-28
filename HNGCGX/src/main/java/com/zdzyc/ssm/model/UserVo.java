@@ -19,13 +19,11 @@ public class UserVo implements Serializable {
     @NotEmpty(message = "{login.password.is.null}")
     private String userPhone;
 
-    @NotEmpty(message = "{login.password.is.null}")
     private String userEmail;
 
     @NotEmpty(message = "{login.password.is.null}")
     private String userPwd;
 
-    @NotEmpty(message = "{login.password.is.null}")
     private String userPwd2;
 
     private String userDetail;
